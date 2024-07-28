@@ -2,12 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Scroll style */
+::-webkit-scrollbar {
+    width: 10px;
+    box-shadow: inset 0 0 5px gray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply bg-blue-800 rounded-[10px];
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-600 cursor-pointer;
+}
+
 * {
     font-family: "Merriweather", serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
+/* Start Main Nav */
 
 .navItem {
     cursor: pointer;
@@ -20,7 +39,6 @@ nav ul span {
     transition: 0.5s;
     @apply absolute top-0 left-0 w-[100px] h-full bg-gradient-to-r from-blue-950 to-blue-800 rounded-lg;
 }
-
 
 nav ul .navItem:nth-child(1):hover~span {
     left: 0;
@@ -50,12 +68,12 @@ nav ul .navItem:nth-child(6):hover~span {
     width: 135px;
 }
 
-nav i{
-    @apply block md:hidden absolute -right-10 top-8 p-3 rounded-r-3xl cursor-pointer  bg-gradient-to-r from-blue-950 to-blue-800 text-white text-2xl hover:rounded-r-xl transition-all;
+nav i {
+    @apply block md:hidden absolute -right-10 top-8 p-3 rounded-r-3xl cursor-pointer bg-gradient-to-r from-blue-950 to-blue-800 text-white text-2xl hover:rounded-r-xl transition-all;
 }
-
-@media (max-width: 770px) {
-    nav ul{
+/* Nav Responsive */
+@media (max-width: 768px) {
+    nav ul {
         text-align: center;
     }
 
@@ -63,51 +81,59 @@ nav i{
         height: 50px;
         width: 100%;
     }
+
     nav ul .navItem:nth-child(1):hover~span {
         top: 0;
     }
-    
+
     nav ul .navItem:nth-child(2):hover~span {
         left: 0;
         top: 70px;
         width: 100%;
     }
-    
+
     nav ul .navItem:nth-child(3):hover~span {
         left: 0;
         top: 135px;
     }
-    
+
     nav ul .navItem:nth-child(4):hover~span {
         left: 0;
         top: 200px;
         width: 100%;
-
     }
-    
+
     nav ul .navItem:nth-child(5):hover~span {
         left: 0;
         top: 270px;
         width: 100%;
     }
-    
+
     nav ul .navItem:nth-child(6):hover~span {
         left: 0;
         top: 335px;
         width: 100%;
     }
-
 }
+/* End Nav Responsive */
+/* End Main Nav */
 
-@media (max-width: 1030px){
-    .text-content h1{
+
+/* text content */
+
+@media (max-width: 1030px) {
+    .text-content h1 {
         font-size: 45px;
     }
-    .main-sec .container{
+
+    .main-sec .container {
         padding: 0 20px;
     }
 }
 
+/* End Text Content */
+
+/* image animation and effect */
 .img-container::after {
     content: '';
     width: 103%;
@@ -125,7 +151,21 @@ nav i{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-.text-content button::after{
+@keyframes rota {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* end image container animation */
+
+/* resume Button */
+
+.text-content button::after {
     content: '';
     position: absolute;
     width: 0%;
@@ -138,19 +178,76 @@ nav i{
     border-radius: 12px;
     z-index: -1;
 }
-.text-content button:hover::after{
+
+.text-content button:hover::after {
     width: 100%;
 }
 
+/* Start About us */
+.about-us h1::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 60px;
+    background-color: white;
+    transition: 0.5s;
+}
 
-@keyframes rota {
+.about-us h1:hover::after{
+    width: 100%;
+}
+
+.about-us img {
+    animation: moveImage 5s infinite;
+    border: 2px solid white;
+    box-shadow: 0 0 5px #fff;
+}
+
+@keyframes moveImage {
     0% {
-        transform: translate(-50%, -50%) rotate(0deg);
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(10px, 10px);
     }
 
     100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-
+        transform: translate(0);
     }
 }
 
+/* End about us */
+
+/* start left Nav */
+
+.left-nav li{
+    @apply text-white text-2xl mb-5 cursor-pointer;
+}
+.link-icons li:nth-child(1):hover{
+    color: #2563eb;
+    text-shadow: 0 0 3px #2563eb;
+}
+.link-icons a:nth-child(2):hover{
+    color: #b6b5ca;
+}
+.link-icons li:nth-child(3):hover{
+    color: #ff6f00;
+}
+.link-icons li:nth-child(4):hover{
+    color: #003fc8;
+    text-shadow: 0 0 3px #003fc8;
+}
+.link-icons li:nth-child(5):hover{
+    color: #32556d;
+    text-shadow: 0 0 3px #32556d;
+}
+
+.left-nav.remove{
+    display: none;
+}
+
+/* End Left Nav */
