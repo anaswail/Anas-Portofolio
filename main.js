@@ -20,7 +20,6 @@ let count6 = 0;
 let number7 = document.getElementById("number7");
 let count7 = 0;
 
-
 // Menu Toggle
 
 const menu = document.querySelector(".menu").addEventListener("click", () => {
@@ -34,39 +33,62 @@ const menu = document.querySelector(".menu").addEventListener("click", () => {
 window.onscroll = () => {
   if (scrollY < 600) {
     document.querySelector(".left-nav").classList.add("remove");
+    document.querySelectorAll(".navItem")[0].classList.add("active");
+    document.querySelectorAll(".navItem")[1].classList.remove("active");
+
   } else if (scrollY >= 600) {
     document.querySelector(".left-nav").classList.remove("remove");
 
+    document.querySelectorAll(".navItem")[0].classList.remove("active");
+
     if (scrollY >= 600 && scrollY < 1000) {
-      document.querySelector(".fa-circle-info").classList.add("text-[#b6b5ca]");
+      document.querySelector(".fa-circle-info").classList.add("text-blue-600");
+      document.querySelectorAll(".navItem")[1].classList.add("active");
     } else {
       document
         .querySelector(".fa-circle-info")
-        .classList.remove("text-[#b6b5ca]");
+        .classList.remove("text-blue-600");
+      document.querySelectorAll(".navItem")[1].classList.remove("active");
     }
 
     if (scrollY >= 1000 && scrollY < 2800) {
-      document.querySelector(".fa-icons").classList.add("text-[#ff6f00]");
       document.querySelectorAll("circle").forEach((element) => {
         element.classList.add("active");
+        document.querySelectorAll(".navItem")[2].classList.add("active");
       });
-
     } else {
       document.querySelectorAll("circle").forEach((element) => {
         element.classList.remove("active");
+      document.querySelectorAll(".navItem")[2].classList.remove("active");
+
       });
-      document.querySelector(".fa-icons").classList.remove("text-[#ff6f00]");
+      document.querySelector(".fa-icons").classList.remove("text-blue-600");
+    }
+    if(scrollY >= 1000 && scrollY < 2000){
+      document.querySelector(".fa-icons").classList.add("text-blue-600");
+    }
+    else{
+      document.querySelector(".fa-icons").classList.remove("text-blue-600");
+
     }
 
-    if(scrollY < 800){
-        count = 0;
-        count2 = 0;
-        count3 = 0;
-        count4 = 0;
-        count5 = 0;
-        count6 = 0;
-        count7 = 0;
-        clearInterval();
+    if(scrollY >= 2000 && scrollY < 3200){
+      document.querySelector('.fa-wand-magic-sparkles').classList.add("text-blue-600");
+    }
+    else{
+      document.querySelector('.fa-wand-magic-sparkles').classList.remove("text-blue-600");
+
+    }
+
+    if (scrollY < 800) {
+      count = 0;
+      count2 = 0;
+      count3 = 0;
+      count4 = 0;
+      count5 = 0;
+      count6 = 0;
+      count7 = 0;
+      clearInterval();
     }
   }
 
@@ -78,15 +100,15 @@ if (scrollY < 600) {
   document.querySelector(".left-nav").classList.remove("remove");
 
   if (scrollY >= 600 && scrollY < 1200) {
-    document.querySelector(".fa-circle-info").classList.add("text-[#b6b5ca]");
+    document.querySelector(".fa-circle-info").classList.add("text-blue-600");
   } else {
     document
       .querySelector(".fa-circle-info")
-      .classList.remove("text-[#b6b5ca]");
+      .classList.remove("text-blue-600");
   }
 
-  if (scrollY >= 1200 && scrollY < 2800) {
-    document.querySelector(".fa-icons").classList.add("text-[#ff6f00]");
+  if (scrollY >= 1200 && scrollY < 2900) {
+    document.querySelector(".fa-icons").classList.add("text-blue-600");
     document.querySelectorAll("circle").forEach((element) => {
       element.classList.add("active");
     });
@@ -98,11 +120,11 @@ if (scrollY < 600) {
     count4 = 0;
     count5 = 0;
     count6 = 0;
-    count7 = 0
+    count7 = 0;
     document.querySelectorAll("circle").forEach((element) => {
       element.classList.remove("active");
     });
-    document.querySelector(".fa-icons").classList.remove("text-[#ff6f00]");
+    document.querySelector(".fa-icons").classList.remove("text-blue-600");
   }
 }
 

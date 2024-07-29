@@ -2109,8 +2109,16 @@ video {
   padding-bottom: 2.5rem;
 }
 
+.pb-11 {
+  padding-bottom: 2.75rem;
+}
+
 .pb-16 {
   padding-bottom: 4rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
 }
 
 .pt-\[20\%\] {
@@ -2288,16 +2296,6 @@ video {
 
 .text-\[\#336699\]\/\[\.35\] {
   color: rgb(51 102 153 / .35);
-}
-
-.text-\[\#b6b5ca\] {
-  --tw-text-opacity: 1;
-  color: rgb(182 181 202 / var(--tw-text-opacity));
-}
-
-.text-\[\#ff6f00\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 111 0 / var(--tw-text-opacity));
 }
 
 .text-blue-500 {
@@ -2761,16 +2759,16 @@ nav ul span {
   --tw-gradient-to: #1e40af var(--tw-gradient-to-position);
 }
 
-nav ul .navItem:nth-child(1):hover~span {
+nav ul .navItem:nth-child(1):hover~span{
   left: 0;
 }
 
-nav ul .navItem:nth-child(2):hover~span {
+nav ul .navItem:nth-child(2):hover~span{
   left: 115px;
   width: 110px;
 }
 
-nav ul .navItem:nth-child(3):hover~span {
+nav ul .navItem:nth-child(3):hover~span{
   left: 240px;
 }
 
@@ -2779,12 +2777,12 @@ nav ul .navItem:nth-child(4):hover~span {
   width: 120px;
 }
 
-nav ul .navItem:nth-child(5):hover~span {
+nav ul .navItem:nth-child(5):hover~span{
   left: 480px;
   width: 110px;
 }
 
-nav ul .navItem:nth-child(6):hover~span {
+nav ul .navItem:nth-child(6):hover~span{
   left: 620px;
   width: 135px;
 }
@@ -2833,34 +2831,40 @@ nav i:hover {
     width: 100%;
   }
 
-  nav ul .navItem:nth-child(1):hover~span {
+  nav ul .navItem:nth-child(1):hover~span,
+    nav ul .navItem:nth-child(1).active~span {
     top: 0;
   }
 
-  nav ul .navItem:nth-child(2):hover~span {
+  nav ul .navItem:nth-child(2):hover~span,
+    nav ul .navItem:nth-child(2).active~span {
     left: 0;
     top: 70px;
     width: 100%;
   }
 
-  nav ul .navItem:nth-child(3):hover~span {
+  nav ul .navItem:nth-child(3):hover~span,
+    nav ul .navItem:nth-child(3).active~span {
     left: 0;
     top: 135px;
   }
 
-  nav ul .navItem:nth-child(4):hover~span {
+  nav ul .navItem:nth-child(4):hover~span ,
+    nav ul .navItem:nth-child(4).active~span{
     left: 0;
     top: 200px;
     width: 100%;
   }
 
-  nav ul .navItem:nth-child(5):hover~span {
+  nav ul .navItem:nth-child(5):hover~span ,
+    nav ul .navItem:nth-child(5).active~span{
     left: 0;
     top: 270px;
     width: 100%;
   }
 
-  nav ul .navItem:nth-child(6):hover~span {
+  nav ul .navItem:nth-child(6):hover~span ,
+    nav ul .navItem:nth-child(6).active~span{
     left: 0;
     top: 335px;
     width: 100%;
@@ -2939,8 +2943,9 @@ nav i:hover {
 
 /* Start About us */
 
-.about-us h1::after,
-.skills h1::after {
+.about-us > h1::after,
+.skills > h1::after,
+.services > h1::after {
   content: '';
   position: absolute;
   bottom: -15px;
@@ -2952,13 +2957,14 @@ nav i:hover {
   transition: 0.5s;
 }
 
-.about-us h1:hover::after,
-.skills h1:hover::after {
+.about-us > h1:hover::after,
+.skills > h1:hover::after,
+.services > h1:hover::after {
   width: 100%;
 }
 
 .about-us img {
-  animation: moveImage 5s infinite;
+  animation: moveImage 5s linear infinite;
   border: 2px solid white;
   box-shadow: 0 0 5px #fff;
 }
@@ -3034,7 +3040,7 @@ nav i:hover {
   }
 }
 
-.skills h1::after{
+.skills h1::after {
   width: 30px;
 }
 
@@ -3069,7 +3075,7 @@ nav i:hover {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-circle{
+circle {
   fill: none;
   stroke: #2563eb;
   stroke-width: 20px;
@@ -3077,77 +3083,77 @@ circle{
   stroke-dashoffset: 472;
 }
 
-.circle1.active{
+.circle1.active {
   animation: animateCircle 2s linear forwards;
 }
 
-.circle2.active{
+.circle2.active {
   animation: animateCircle2 2s linear forwards;
 }
 
-.circle3.active{
+.circle3.active {
   animation: animateCircle3 2s linear forwards;
 }
 
-.circle4.active{
+.circle4.active {
   animation: animateCircle4 2s linear forwards;
 }
 
-.circle5.active{
+.circle5.active {
   animation: animateCircle5 2s linear forwards;
 }
 
-.circle6.active{
+.circle6.active {
   animation: animateCircle6 2s linear forwards;
 }
 
-.circle7.active{
+.circle7.active {
   animation: animateCircle7 2s linear forwards;
 }
 
-@keyframes animateCircle{
-  100%{
+@keyframes animateCircle {
+  100% {
     stroke-dashoffset: 65;
   }
 }
 
-@keyframes animateCircle2{
-  100%{
+@keyframes animateCircle2 {
+  100% {
     stroke-dashoffset: 79;
   }
 }
 
-@keyframes animateCircle3{
-  100%{
+@keyframes animateCircle3 {
+  100% {
     stroke-dashoffset: 180;
   }
 }
 
-@keyframes animateCircle4{
-  100%{
+@keyframes animateCircle4 {
+  100% {
     stroke-dashoffset: 120;
   }
 }
 
-@keyframes animateCircle5{
-  100%{
+@keyframes animateCircle5 {
+  100% {
     stroke-dashoffset: 160;
   }
 }
 
-@keyframes animateCircle6{
-  100%{
+@keyframes animateCircle6 {
+  100% {
     stroke-dashoffset: 235;
   }
 }
 
-@keyframes animateCircle7{
-  100%{
+@keyframes animateCircle7 {
+  100% {
     stroke-dashoffset: 170;
   }
 }
 
-svg{
+svg {
   position: absolute;
   top: 0;
   left: 0;
@@ -3163,6 +3169,76 @@ svg{
 }
 
 /* End Skills */
+
+/* Start Service */
+
+.service {
+  display: flex;
+  height: 20rem;
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.375rem;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .service {
+    width: 25%;
+  }
+}
+
+.service{
+  box-shadow: 0 0 5px white;
+  transition: 0.3s;
+}
+
+.service:hover{
+  cursor: pointer;
+  border-color: #2563eb;
+  box-shadow: 0 0 10px #2563eb
+}
+
+.service img {
+  width: 50%;
+}
+
+.service h1 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
+  color: 20;
+}
+
+@media (min-width: 1024px) {
+  .service h1 {
+    font-size: 24px;
+  }
+}
+
+.service p {
+  text-align: center;
+  color: 14;
+}
+
+@media (min-width: 1024px) {
+  .service p {
+    font-size: 16px;
+  }
+}
+
+/* End Service  */
 
 @media (min-width: 640px) {
   .sm\:container {
@@ -3204,24 +3280,9 @@ svg{
   font-weight: 700;
 }
 
-.hover\:text-\[\#003fc8\]:hover {
+.hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
-  color: rgb(0 63 200 / var(--tw-text-opacity));
-}
-
-.hover\:text-\[\#32556d\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(50 85 109 / var(--tw-text-opacity));
-}
-
-.hover\:text-\[\#b6b5ca\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(182 181 202 / var(--tw-text-opacity));
-}
-
-.hover\:text-\[\#ff6f00\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 111 0 / var(--tw-text-opacity));
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .before\:hover\:text-center:hover::before {
@@ -3335,6 +3396,10 @@ svg{
     gap: 0px;
   }
 
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .md\:gap-20 {
     gap: 5rem;
   }
@@ -3363,8 +3428,17 @@ svg{
     padding-bottom: 1rem;
   }
 
+  .md\:py-\[10\%\] {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
   .md\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .md\:pb-8 {
+    padding-bottom: 2rem;
   }
 
   .md\:pt-\[8\%\] {
@@ -3383,6 +3457,12 @@ svg{
 
   .md\:text-\[20px\] {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
 }
 
