@@ -2080,6 +2080,11 @@ video {
   padding-right: 0.375rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -2098,6 +2103,18 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pb-16 {
+  padding-bottom: 4rem;
+}
+
+.pt-\[20\%\] {
+  padding-top: 20%;
 }
 
 .pt-\[30\%\] {
@@ -2773,6 +2790,7 @@ nav ul .navItem:nth-child(6):hover~span {
 }
 
 nav i {
+  transition: 0.5s;
   position: absolute;
   right: -2.5rem;
   top: 2rem;
@@ -2790,9 +2808,6 @@ nav i {
   line-height: 2rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 nav i:hover {
@@ -3008,8 +3023,19 @@ nav i:hover {
 
 .skill {
   position: relative;
+  margin-top: 4rem;
   height: 160px;
   width: 160px;
+}
+
+@media (min-width: 768px) {
+  .skill {
+    margin-top: 0px;
+  }
+}
+
+.skills h1::after{
+  width: 30px;
 }
 
 .outer {
@@ -3045,7 +3071,7 @@ nav i:hover {
 
 circle{
   fill: none;
-  stroke: url(#GradientColor);
+  stroke: #2563eb;
   stroke-width: 20px;
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
@@ -3075,6 +3101,10 @@ circle{
   animation: animateCircle6 2s linear forwards;
 }
 
+.circle7.active{
+  animation: animateCircle7 2s linear forwards;
+}
+
 @keyframes animateCircle{
   100%{
     stroke-dashoffset: 65;
@@ -3089,7 +3119,7 @@ circle{
 
 @keyframes animateCircle3{
   100%{
-    stroke-dashoffset: 200;
+    stroke-dashoffset: 180;
   }
 }
 
@@ -3101,13 +3131,19 @@ circle{
 
 @keyframes animateCircle5{
   100%{
-    stroke-dashoffset: 180;
+    stroke-dashoffset: 160;
   }
 }
 
 @keyframes animateCircle6{
   100%{
-    stroke-dashoffset: 280;
+    stroke-dashoffset: 235;
+  }
+}
+
+@keyframes animateCircle7{
+  100%{
+    stroke-dashoffset: 170;
   }
 }
 
@@ -3287,10 +3323,6 @@ svg{
     flex-direction: row;
   }
 
-  .md\:flex-col {
-    flex-direction: column;
-  }
-
   .md\:items-start {
     align-items: flex-start;
   }
@@ -3303,8 +3335,8 @@ svg{
     gap: 0px;
   }
 
-  .md\:gap-28 {
-    gap: 7rem;
+  .md\:gap-20 {
+    gap: 5rem;
   }
 
   .md\:overflow-hidden {
@@ -3329,6 +3361,10 @@ svg{
   .md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .md\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .md\:pt-\[8\%\] {

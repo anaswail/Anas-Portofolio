@@ -69,7 +69,8 @@ nav ul .navItem:nth-child(6):hover~span {
 }
 
 nav i {
-    @apply block md:hidden absolute -right-10 top-8 p-3 rounded-r-3xl cursor-pointer bg-gradient-to-r from-blue-950 to-blue-800 text-white text-2xl hover:rounded-r-xl transition-all;
+    transition: 0.5s;
+    @apply block md:hidden absolute -right-10 top-8 p-3 rounded-r-3xl cursor-pointer bg-gradient-to-r from-blue-950 to-blue-800 text-white text-2xl hover:rounded-r-xl ;
 }
 
 /* Nav Responsive */
@@ -264,7 +265,11 @@ nav i {
 
 /* Start Skills */
 .skill {
-    @apply w-[160px] h-[160px] relative
+    @apply w-[160px] h-[160px] relative md:mt-0 mt-16;
+}
+
+.skills h1::after{
+    width: 30px;
 }
 
 .outer {
@@ -288,7 +293,7 @@ nav i {
 
 circle{
     fill: none;
-    stroke: url(#GradientColor);
+    stroke: #2563eb;
     stroke-width: 20px;
     stroke-dasharray: 472;
     stroke-dashoffset: 472;
@@ -313,6 +318,10 @@ circle{
     animation: animateCircle6 2s linear forwards;
 }
 
+.circle7.active{
+    animation: animateCircle7 2s linear forwards;
+}
+
 @keyframes animateCircle{
     100%{
         stroke-dashoffset: 65;
@@ -326,7 +335,7 @@ circle{
 }
 @keyframes animateCircle3{
     100%{
-        stroke-dashoffset: 200;
+        stroke-dashoffset: 180;
     }
 }
 @keyframes animateCircle4{
@@ -337,12 +346,18 @@ circle{
 
 @keyframes animateCircle5{
     100%{
-        stroke-dashoffset: 180;
+        stroke-dashoffset: 160;
     }
 }
 @keyframes animateCircle6{
     100%{
-        stroke-dashoffset: 280;
+        stroke-dashoffset: 235;
+    }
+}
+
+@keyframes animateCircle7{
+    100%{
+        stroke-dashoffset: 170;
     }
 }
 svg{

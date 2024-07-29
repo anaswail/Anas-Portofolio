@@ -17,6 +17,9 @@ let count5 = 0;
 let number6 = document.getElementById("number6");
 let count6 = 0;
 
+let number7 = document.getElementById("number7");
+let count7 = 0;
+
 
 // Menu Toggle
 
@@ -42,7 +45,7 @@ window.onscroll = () => {
         .classList.remove("text-[#b6b5ca]");
     }
 
-    if (scrollY >= 1000 && scrollY < 2000) {
+    if (scrollY >= 1000 && scrollY < 2800) {
       document.querySelector(".fa-icons").classList.add("text-[#ff6f00]");
       document.querySelectorAll("circle").forEach((element) => {
         element.classList.add("active");
@@ -62,6 +65,7 @@ window.onscroll = () => {
         count4 = 0;
         count5 = 0;
         count6 = 0;
+        count7 = 0;
         clearInterval();
     }
   }
@@ -81,7 +85,7 @@ if (scrollY < 600) {
       .classList.remove("text-[#b6b5ca]");
   }
 
-  if (scrollY >= 1200 && scrollY < 1800) {
+  if (scrollY >= 1200 && scrollY < 2800) {
     document.querySelector(".fa-icons").classList.add("text-[#ff6f00]");
     document.querySelectorAll("circle").forEach((element) => {
       element.classList.add("active");
@@ -91,6 +95,10 @@ if (scrollY < 600) {
     count = 0;
     count2 = 0;
     count3 = 0;
+    count4 = 0;
+    count5 = 0;
+    count6 = 0;
+    count7 = 0
     document.querySelectorAll("circle").forEach((element) => {
       element.classList.remove("active");
     });
@@ -137,5 +145,11 @@ setInterval(() => {
   } else {
     count6 += 1;
     number6.innerHTML = count6 + "%";
+  }
+  if (count7 == 65) {
+    clearInterval();
+  } else {
+    count7 += 1;
+    number7.innerHTML = count7 + "%";
   }
 }, 20);
