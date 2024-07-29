@@ -71,6 +71,7 @@ nav ul .navItem:nth-child(6):hover~span {
 nav i {
     @apply block md:hidden absolute -right-10 top-8 p-3 rounded-r-3xl cursor-pointer bg-gradient-to-r from-blue-950 to-blue-800 text-white text-2xl hover:rounded-r-xl transition-all;
 }
+
 /* Nav Responsive */
 @media (max-width: 768px) {
     nav ul {
@@ -115,6 +116,7 @@ nav i {
         width: 100%;
     }
 }
+
 /* End Nav Responsive */
 /* End Main Nav */
 
@@ -151,6 +153,7 @@ nav i {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+
 @keyframes rota {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
@@ -184,7 +187,8 @@ nav i {
 }
 
 /* Start About us */
-.about-us h1::after {
+.about-us h1::after,
+.skills h1::after {
     content: '';
     position: absolute;
     bottom: -15px;
@@ -196,7 +200,8 @@ nav i {
     transition: 0.5s;
 }
 
-.about-us h1:hover::after{
+.about-us h1:hover::after,
+.skills h1:hover::after {
     width: 100%;
 }
 
@@ -224,30 +229,129 @@ nav i {
 
 /* start left Nav */
 
-.left-nav li{
+.left-nav li {
     @apply text-white text-2xl mb-5 cursor-pointer;
 }
-.link-icons li:nth-child(1):hover{
+
+.link-icons li:nth-child(1):hover {
     color: #2563eb;
     text-shadow: 0 0 3px #2563eb;
 }
-.link-icons a:nth-child(2):hover{
+
+.link-icons a:nth-child(2):hover {
     color: #b6b5ca;
 }
-.link-icons li:nth-child(3):hover{
+
+.link-icons li:nth-child(3):hover {
     color: #ff6f00;
 }
-.link-icons li:nth-child(4):hover{
+
+.link-icons li:nth-child(4):hover {
     color: #003fc8;
     text-shadow: 0 0 3px #003fc8;
 }
-.link-icons li:nth-child(5):hover{
+
+.link-icons li:nth-child(5):hover {
     color: #32556d;
     text-shadow: 0 0 3px #32556d;
 }
 
-.left-nav.remove{
+.left-nav.remove {
     display: none;
 }
 
 /* End Left Nav */
+
+/* Start Skills */
+.skill {
+    @apply w-[160px] h-[160px] relative
+}
+
+.outer {
+    @apply h-[160px] w-[160px] rounded-[50%] p-[20px];
+    box-shadow: -6px -6px 10px -1px rgba(0, 0, 0, 0.7),
+        6px 6px 6px -1px rgba(255, 255, 255, 0.15);
+}
+
+.inner {
+    @apply h-[120px] w-[120px] rounded-[50%] flex items-center justify-center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(0, 0, 0, 0.7),
+        -0.5px -0.5px 0px rgba(0, 0, 0, 1),
+        0.5px 0.5px 0px rgba(255, 255, 255, 0.15),
+        8px 12px 10px -10px rgba(255, 255, 255, 0.05);
+}
+
+.number{
+    @apply font-[600] text-white text-2xl;
+}
+
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+}
+.circle1.active{
+    animation: animateCircle 2s linear forwards;
+}
+.circle2.active{
+    animation: animateCircle2 2s linear forwards;
+}
+.circle3.active{
+    animation: animateCircle3 2s linear forwards;
+}
+
+.circle4.active{
+    animation: animateCircle4 2s linear forwards;
+}
+.circle5.active{
+    animation: animateCircle5 2s linear forwards;
+}
+.circle6.active{
+    animation: animateCircle6 2s linear forwards;
+}
+
+@keyframes animateCircle{
+    100%{
+        stroke-dashoffset: 65;
+    }
+}
+
+@keyframes animateCircle2{
+    100%{
+        stroke-dashoffset: 79;
+    }
+}
+@keyframes animateCircle3{
+    100%{
+        stroke-dashoffset: 200;
+    }
+}
+@keyframes animateCircle4{
+    100%{
+        stroke-dashoffset: 120;
+    }
+}
+
+@keyframes animateCircle5{
+    100%{
+        stroke-dashoffset: 180;
+    }
+}
+@keyframes animateCircle6{
+    100%{
+        stroke-dashoffset: 280;
+    }
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.skill h2{
+    @apply font-bold text-white tracking-normal text-center mt-5;
+}
+/* End Skills */
