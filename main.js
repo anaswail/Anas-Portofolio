@@ -66,10 +66,11 @@ window.onscroll = () => {
     }
     if(scrollY >= 1000 && scrollY < 2000){
       document.querySelector(".fa-icons").classList.add("text-blue-600");
+      document.querySelectorAll(".navItem")[3].classList.add("active");
     }
     else{
       document.querySelector(".fa-icons").classList.remove("text-blue-600");
-
+      document.querySelectorAll(".navItem")[3].classList.remove("active");
     }
 
     if(scrollY >= 2000 && scrollY < 3200){
