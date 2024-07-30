@@ -35,8 +35,16 @@ window.onscroll = () => {
     document.querySelector(".left-nav").classList.add("remove");
     document.querySelectorAll(".navItem")[0].classList.add("active");
     document.querySelectorAll(".navItem")[1].classList.remove("active");
-
+    document.querySelector(".upButton").style.display = "none";
   } else if (scrollY >= 600) {
+    document.querySelector(".upButton").style.display = "block";
+    document.querySelector(".upButton").addEventListener("click", () => {
+      scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+
     document.querySelector(".left-nav").classList.remove("remove");
 
     document.querySelectorAll(".navItem")[0].classList.remove("active");
@@ -59,31 +67,30 @@ window.onscroll = () => {
     } else {
       document.querySelectorAll("circle").forEach((element) => {
         element.classList.remove("active");
-      document.querySelectorAll(".navItem")[2].classList.remove("active");
-
+        document.querySelectorAll(".navItem")[2].classList.remove("active");
       });
       document.querySelector(".fa-icons").classList.remove("text-blue-600");
     }
-    if(scrollY >= 1000 && scrollY < 2000){
+    if (scrollY >= 1000 && scrollY < 1900) {
       document.querySelector(".fa-icons").classList.add("text-blue-600");
-    }
-    else{
+    } else {
       document.querySelector(".fa-icons").classList.remove("text-blue-600");
     }
 
-    if(scrollY >= 2800 && scrollY < 4200){
+    if (scrollY >= 2800 && scrollY < 4200) {
       document.querySelectorAll(".navItem")[3].classList.add("active");
-    }
-    else{
+    } else {
       document.querySelectorAll(".navItem")[3].classList.remove("active");
     }
 
-    if(scrollY >= 2000 && scrollY < 3200){
-      document.querySelector('.fa-wand-magic-sparkles').classList.add("text-blue-600");
-    }
-    else{
-      document.querySelector('.fa-wand-magic-sparkles').classList.remove("text-blue-600");
-
+    if (scrollY >= 1900 && scrollY < 3200) {
+      document
+        .querySelector(".fa-wand-magic-sparkles")
+        .classList.add("text-blue-600");
+    } else {
+      document
+        .querySelector(".fa-wand-magic-sparkles")
+        .classList.remove("text-blue-600");
     }
 
     if (scrollY < 800) {
@@ -108,9 +115,7 @@ if (scrollY < 600) {
   if (scrollY >= 600 && scrollY < 1200) {
     document.querySelector(".fa-circle-info").classList.add("text-blue-600");
   } else {
-    document
-      .querySelector(".fa-circle-info")
-      .classList.remove("text-blue-600");
+    document.querySelector(".fa-circle-info").classList.remove("text-blue-600");
   }
 
   if (scrollY >= 1200 && scrollY < 2900) {

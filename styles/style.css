@@ -40,16 +40,16 @@ nav ul span {
     @apply absolute top-0 left-0 w-[100px] h-full bg-gradient-to-r from-blue-950 to-blue-800 rounded-lg;
 }
 
-nav ul .navItem:nth-child(1):hover~span{
+nav ul .navItem:nth-child(1):hover~span {
     left: 0;
 }
 
-nav ul .navItem:nth-child(2):hover~span{
+nav ul .navItem:nth-child(2):hover~span {
     left: 115px;
     width: 110px;
 }
 
-nav ul .navItem:nth-child(3):hover~span{
+nav ul .navItem:nth-child(3):hover~span {
     left: 240px;
 }
 
@@ -58,12 +58,12 @@ nav ul .navItem:nth-child(4):hover~span {
     width: 120px;
 }
 
-nav ul .navItem:nth-child(5):hover~span{
+nav ul .navItem:nth-child(5):hover~span {
     left: 480px;
     width: 110px;
 }
 
-nav ul .navItem:nth-child(6):hover~span{
+nav ul .navItem:nth-child(6):hover~span {
     left: 620px;
     width: 135px;
 }
@@ -102,22 +102,22 @@ nav i {
         top: 135px;
     }
 
-    nav ul .navItem:nth-child(4):hover~span ,
-    nav ul .navItem:nth-child(4).active~span{
+    nav ul .navItem:nth-child(4):hover~span,
+    nav ul .navItem:nth-child(4).active~span {
         left: 0;
         top: 200px;
         width: 100%;
     }
 
-    nav ul .navItem:nth-child(5):hover~span ,
-    nav ul .navItem:nth-child(5).active~span{
+    nav ul .navItem:nth-child(5):hover~span,
+    nav ul .navItem:nth-child(5).active~span {
         left: 0;
         top: 270px;
         width: 100%;
     }
 
-    nav ul .navItem:nth-child(6):hover~span ,
-    nav ul .navItem:nth-child(6).active~span{
+    nav ul .navItem:nth-child(6):hover~span,
+    nav ul .navItem:nth-child(6).active~span {
         left: 0;
         top: 335px;
         width: 100%;
@@ -127,6 +127,23 @@ nav i {
 /* End Nav Responsive */
 /* End Main Nav */
 
+/* up Button  */
+.upButton:hover{
+    animation: upButton 1s linear infinite;
+    background-color:#2563eb;
+}
+
+@keyframes upButton {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
 
 /* text content */
 
@@ -194,9 +211,10 @@ nav i {
 }
 
 /* Start About us */
-.about-us > h1::after,
-.skills > h1::after,
-.services > h1::after {
+.about-us>h1::after,
+.skills>h1::after,
+.services>h1::after,
+.projects>h1::after {
     content: '';
     position: absolute;
     bottom: -15px;
@@ -208,9 +226,10 @@ nav i {
     transition: 0.5s;
 }
 
-.about-us > h1:hover::after,
-.skills > h1:hover::after,
-.services > h1:hover::after {
+.about-us>h1:hover::after,
+.skills>h1:hover::after,
+.services>h1:hover::after,
+.projects>h1:hover::after {
     width: 100%;
 }
 
@@ -390,27 +409,101 @@ svg {
 /* End Skills */
 
 /* Start Service */
-.service{
-    @apply border-solid border-[2px] border-white text-white p-8 h-80 rounded-md flex flex-col items-center justify-between w-[70%] md:w-1/4;
-    box-shadow: 0 0 5px white;
+.service {
+    @apply border-solid border-[2px] border-[#2563eb] text-white p-8 h-96 rounded-md flex flex-col items-center justify-between w-[70%] md:w-1/4;
+    box-shadow: 0 0 6px #2563eb;
     transition: 0.3s;
+    animation: changeBorder 4s linear infinite;
 }
 
-.service:hover{
-    cursor: pointer;
-    border-color: #2563eb;
-    box-shadow: 0 0 10px #2563eb
+.service:nth-child(2){
+    animation-delay: 2s;
 }
 
-.service img{
+@keyframes changeBorder{
+    0% {
+        
+        transform: translateY(0);
+    }
+    50% {
+       
+        transform: translateY(-10px);
+    }
+    100% {
+        
+        transform: translateY(0);
+    }
+}
+
+.service img {
     @apply w-1/2;
 }
 
-.service h1{
+.service h1 {
     @apply font-bold lg:text-[24px] text-center my-5 text-blue-400 w-full text-[20];
 }
 
-.service p{
+.service p {
     @apply text-center lg:text-[16px] text-[14];
 }
+
 /* End Service  */
+
+/* start Projects */
+.project{
+    @apply p-4 rounded-xl relative text-white bg-black overflow-hidden flex flex-col justify-center items-center;
+    width: 300px;
+    height: 430px;
+    box-shadow: 0 0 5px black;
+}
+
+
+.project::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 140%;
+    background: linear-gradient(#1700FF, #00ccff);
+    animation: borderAnimation 4s linear infinite;
+}
+
+.project::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    inset: 4px;
+    border-radius: 12px;
+}
+
+.project .content{
+    @apply flex flex-col justify-between h-full;
+}
+
+@keyframes borderAnimation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.btns button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: 0.5s;
+    border-radius: 24px;
+    z-index: -1;
+}
+.btns button:hover::after{
+    width: 100%;
+}
+
+
+
+
+/* End Projects  */

@@ -17,23 +17,28 @@
 
 <body class="bg-zinc-950 overflow-x-hidden">
 
+    <!-- Arrow up -->
+    <button
+        class="upButton bg-gradient-to-t from-blue-800 to-blue-950 p-2 text-xl  md:p-4 rounded-2xl text-white md:text-2xl fixed bottom-4 right-4 z-50 hover:rounded-xl"><i
+            class="fa-solid fa-arrow-up"></i></button>
+
     <!-- Start Left Nav  -->
     <div
         class="left-nav transition-all fixed p-5 rounded-md left-3 top-1/2 -translate-y-1/2 md:block hidden bg-black border-[2px] border-solid border-white h-[90%] z-[9999]">
         <ul class="link-icons">
             <a href="#main-sec">
-                <li ><i class="fa-solid fa-home"></i></li>
+                <li><i class="fa-solid fa-home"></i></li>
             </a>
             <a href="#about-us">
-                <li ><i class="fa-solid fa-circle-info hover:text-blue-600"></i></li>
+                <li><i class="fa-solid fa-circle-info hover:text-blue-600"></i></li>
             </a>
             <a href="#skills">
                 <li><i class="fa-solid fa-icons hover:text-blue-600"></i></li>
             </a>
-            <a href="#">
+            <a href="#services">
                 <li><i class="fa-solid fa-wand-magic-sparkles hover:text-blue-600"></i></li>
             </a>
-            <a href="#">
+            <a href="#projects">
                 <li><i class="fa-solid fa-laptop-code hover:text-blue-600"></i></li>
             </a>
             <a href="#">
@@ -133,165 +138,166 @@
     <!-- End About Us -->
 
     <!-- Start Skills section  -->
-    <div id="skills" class="skills relative lg:pb-0 pb-11">
-        <h1 class="text-white text-3xl absolute top-0 left-1/2 -translate-x-1/2 mt-5 ">Skills</h1>
+    <div id="skills" class="skills relative lg:pb-0 h-fit">
+        <h1 class="text-white text-3xl absolute top-0 left-1/2 -translate-x-1/2 mt-5 lg:py-0">Skills</h1>
         <div
-            class="container overflow-hidden mx-auto flex items-center md:items-start flex-wrap h-full md:mt-0 md:pt-[8%] md:h-lvh pt-[20%]  justify-center gap-6 md:gap-20 md:flex-row flex-col px-2 md:px-40 pb-16 md:pb-8">
-                <div class="skill">
-                    <div class="outer">
-                        <div class="inner">
-                            <div class="number" id="number">
+            class="container overflow-hidden mx-auto flex items-center md:items-start flex-wrap h-full md:mt-0 md:pt-[8%]  pt-[20%]  justify-center gap-6 md:gap-20 md:flex-row flex-col px-2 md:px-40 pb-40 md:pb-24">
+            <div class="skill">
+                <div class="outer">
+                    <div class="inner">
+                        <div class="number" id="number">
 
-                            </div>
                         </div>
                     </div>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                        <defs>
-                            <linearGradient id="GradientColor">
-                                <stop offset="0%" stop-color="#e91e63" />
-                                <stop offset="100%" stop-color="#673ab7" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="circle1" cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
-
-                    <h2>HTML</h2>
                 </div>
-                <div class="skill">
-                    <div class="outer">
-                        <div class="inner">
-                            <div class="number" id="number2">
 
-                            </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="circle1" cx="80" cy="80" r="70" stroke-linecap="round" />
+                </svg>
+
+                <h2>HTML</h2>
+            </div>
+            <div class="skill">
+                <div class="outer">
+                    <div class="inner">
+                        <div class="number" id="number2">
+
                         </div>
                     </div>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                        <defs>
-                            <linearGradient id="GradientColor">
-                                <stop offset="0%" stop-color="#e91e63" />
-                                <stop offset="100%" stop-color="#673ab7" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="circle2" cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
-
-                    <h2>CSS</h2>
                 </div>
-                <div class="skill">
-                    <div class="outer">
-                        <div class="inner">
-                            <div class="number" id="number3">
 
-                            </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="circle2" cx="80" cy="80" r="70" stroke-linecap="round" />
+                </svg>
+
+                <h2>CSS</h2>
+            </div>
+            <div class="skill">
+                <div class="outer">
+                    <div class="inner">
+                        <div class="number" id="number3">
+
                         </div>
                     </div>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                        <defs>
-                            <linearGradient id="GradientColor">
-                                <stop offset="0%" stop-color="#e91e63" />
-                                <stop offset="100%" stop-color="#673ab7" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="circle3" cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
-
-                    <h2>JS</h2>
                 </div>
-                <div class="skill">
-                    <div class="outer">
-                        <div class="inner">
-                            <div class="number" id="number4">
 
-                            </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="circle3" cx="80" cy="80" r="70" stroke-linecap="round" />
+                </svg>
+
+                <h2>JS</h2>
+            </div>
+            <div class="skill">
+                <div class="outer">
+                    <div class="inner">
+                        <div class="number" id="number4">
+
                         </div>
                     </div>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                        <defs>
-                            <linearGradient id="GradientColor">
-                                <stop offset="0%" stop-color="#e91e63" />
-                                <stop offset="100%" stop-color="#673ab7" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="circle4" cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
-
-                    <h2>TailwindCSS</h2>
                 </div>
-                <div class="skill">
-                    <div class="outer">
-                        <div class="inner">
-                            <div class="number" id="number5">
 
-                            </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="circle4" cx="80" cy="80" r="70" stroke-linecap="round" />
+                </svg>
+
+                <h2>TailwindCSS</h2>
+            </div>
+            <div class="skill">
+                <div class="outer">
+                    <div class="inner">
+                        <div class="number" id="number5">
+
                         </div>
                     </div>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                        <defs>
-                            <linearGradient id="GradientColor">
-                                <stop offset="0%" stop-color="#e91e63" />
-                                <stop offset="100%" stop-color="#673ab7" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="circle5" cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
-
-                    <h2>Git & GitHub</h2>
                 </div>
-                <div class="skill">
-                    <div class="outer">
-                        <div class="inner">
-                            <div class="number" id="number6">
 
-                            </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="circle5" cx="80" cy="80" r="70" stroke-linecap="round" />
+                </svg>
+
+                <h2>Git & GitHub</h2>
+            </div>
+            <div class="skill">
+                <div class="outer">
+                    <div class="inner">
+                        <div class="number" id="number6">
+
                         </div>
                     </div>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                        <defs>
-                            <linearGradient id="GradientColor">
-                                <stop offset="0%" stop-color="#e91e63" />
-                                <stop offset="100%" stop-color="#673ab7" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="circle6" cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
-
-                    <h2>C++ / Python</h2>
                 </div>
-                <div class="skill">
-                    <div class="outer">
-                        <div class="inner">
-                            <div class="number" id="number7">
 
-                            </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="circle6" cx="80" cy="80" r="70" stroke-linecap="round" />
+                </svg>
+
+                <h2>C++ / Python</h2>
+            </div>
+            <div class="skill">
+                <div class="outer">
+                    <div class="inner">
+                        <div class="number" id="number7">
+
                         </div>
                     </div>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                        <defs>
-                            <linearGradient id="GradientColor">
-                                <stop offset="0%" stop-color="#e91e63" />
-                                <stop offset="100%" stop-color="#673ab7" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="circle7" cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
-
-                    <h2>Adobe Xd</h2>
                 </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="circle7" cx="80" cy="80" r="70" stroke-linecap="round" />
+                </svg>
+
+                <h2>Adobe Xd</h2>
+            </div>
         </div>
     </div>
     <!-- End Skills section  -->
 
     <!-- Start Services Section  -->
-    <div id="services" class="services bg-black relative pb-3">
+    <div id="services" class="services bg-black relative pb-8">
         <h1 class="text-white text-3xl absolute top-0 left-1/2 -translate-x-1/2 mt-5 ">Services</h1>
-        <div class="container flex-wrap overflow-hidden mx-auto flex items-center h-full md:mt-0 md:py-[10%]  pt-[30%] justify-center gap-6 md:gap-10 md:flex-row flex-col-reverse px-5 md:px-20 pb-10 md:pb-0">
+        <div
+            class="container flex-wrap overflow-hidden mx-auto flex items-center h-full md:mt-0 md:py-[10%]  pt-[30%] justify-center gap-6 md:gap-10 md:flex-row flex-col px-5 md:px-20 pb-10 md:pb-0">
             <div class="service ">
                 <img src="images/icons8-design-100.png" alt="">
                 <h1>Creative & Responsive Design</h1>
@@ -311,18 +317,201 @@
     </div>
     <!-- End Services Section  -->
 
+    <!-- Start Projects Section  -->
+    <div id="projects" class="projects relative">
+        <h1 class="text-white text-3xl absolute top-0 left-1/2 -translate-x-1/2 mt-5 ">Projects</h1>
+        <div
+            class="container flex-wrap overflow-hidden mx-auto flex items-center h-full md:mt-0 md:py-[10%]  pt-[30%] justify-center gap-6 md:gap-10 md:flex-row flex-col px-5 md:px-20 pb-10 md:pb-0">
+            <div class="project">
+                <div class="content">
+                    <div class="top">
+                        <div class="img-content relative z-10">
+                            <img class="rounded-md border-solid border-white border-[2px]"
+                                src="images/Nike-Store-E-commerce.png" alt="">
+                        </div>
+                        <h1 class="relative z-10 font-bold text-xl my-3">Nike E-commerce</h1>
+                        <div class="languages">
+                            <span
+                                class="relative z-10 text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">html</span>
+                            <span
+                                class="z-10 relative text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">TailwindCSS</span>
+                            <span
+                                class="z-10 relative text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">JavaScript</span>
+                        </div>
+                    </div>
+                    <h2 class="relative z-10 my-4 text-sm leading-6">Nike Store E-commerce Using HTML & CSS &
+                        TailwindCSS and JavaScript with a responsive design and send product to whatsapp advantage</h2>
+                    <div class="btns flex justify-between items-center">
+                        <a href="https://nike-store-e-commerce-flax.vercel.app/" target="_blank"><button
+                                class="relative z-10 py-3 px-3 border-solid border-white border-[2px] rounded-3xl overflow-hidden after:bg-gradient-to-r after:from-blue-950 after:to-blue-800 text-[18px]">Live
+                                Demo</button></a>
+                        <a href="https://github.com/anaswail/Nike-Store-e-commerce" target="_blank"><button
+                                class="relative z-10 py-3 px-3 border-solid border-white border-[2px] rounded-3xl overflow-hidden after:bg-gradient-to-r after:from-blue-700 after:to-purple-700 text-[18px]">GitHub
+                                Link</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="content">
+                    <div class="top">
+                        <div class="img-content relative z-10">
+                            <img class="rounded-md border-solid border-white border-[2px]"
+                                src="images/Portofolio Templet.png" alt="">
+                        </div>
+                        <h1 class="relative z-10 font-bold text-xl my-3">Porotfolio templet</h1>
+                        <div class="languages">
+                            <span
+                                class="relative z-10 text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">html</span>
+                            <span
+                                class="z-10 relative text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">CSS</span>
+                            <span
+                                class="z-10 relative text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">JavaScript</span>
+                        </div>
+                    </div>
+                    <h2 class="relative z-10 my-4 text-sm leading-6">Portofolio templet Using HTML & CSS and Js With a
+                        responsive design and settings menu</h2>
+                    <div class="btns flex justify-between items-center">
+                        <a href="https://portofolio-templet.vercel.app/" target="_blank"><button
+                                class="relative z-10 py-3 px-3 border-solid border-white border-[2px] rounded-3xl overflow-hidden after:bg-gradient-to-r after:from-blue-950 after:to-blue-800 text-[18px]">Live
+                                Demo</button></a>
+                        <a href="https://github.com/anaswail/Portofolio-templet" target="_blank"><button
+                                class="relative z-10 py-3 px-3 border-solid border-white border-[2px] rounded-3xl overflow-hidden after:bg-gradient-to-r after:from-blue-700 after:to-purple-700 text-[18px]">GitHub
+                                Link</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="content">
+                    <div class="top">
+                        <div class="img-content relative z-10">
+                            <img class="rounded-md border-solid border-white border-[2px]"
+                                src="images/Dilevery Website.png" alt="">
+                        </div>
+                        <h1 class="relative z-10 font-bold text-xl my-3">Dilevery WebSite</h1>
+                        <div class="languages">
+                            <span
+                                class="relative z-10 text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">html</span>
+                            <span
+                                class="z-10 relative text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">CSS</span>
+                            <span
+                                class="z-10 relative text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">JavaScript</span>
+                        </div>
+                    </div>
+                    <h2 class="relative z-10 my-4 text-sm leading-6">Portofolio templet Using HTML & CSS and Js With a creative design and change mood </h2>
+                    <div class="btns flex justify-between items-center">
+                        <a href="https://dilevary-website-anas.vercel.app/" target="_blank"><button
+                                class="relative z-10 py-3 px-3 border-solid border-white border-[2px] rounded-3xl overflow-hidden after:bg-gradient-to-r after:from-blue-950 after:to-blue-800 text-[18px]">Live
+                                Demo</button></a>
+                        <a href="https://github.com/anaswail/Dilevary-website" target="_blank"><button
+                                class="relative z-10 py-3 px-3 border-solid border-white border-[2px] rounded-3xl overflow-hidden after:bg-gradient-to-r after:from-blue-700 after:to-purple-700 text-[18px]">GitHub
+                                Link</button></a>
+                    </div>
+                </div>
+            </div>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed(".auto-type", {
-            strings: ["Programmer 💻", "Freelancer 🚀", "Ui Designer 👾", "Front-end 👨‍💻"],
-            typespped: 250,
-            backSpeed: 150,
-            looped: true,
-        })
+            <div class="project">
+                <div class="content">
+                    <div class="top">
+                        <div class="img-content relative z-10">
+                            <img class="rounded-md border-solid border-white border-[2px]"
+                                src="images/Cruds Project.png" alt="">
+                        </div>
+                        <h1 class="relative z-10 font-bold text-xl my-3">CRUDS <span class="text-sm">(Product Manager)</span></h1>
+                        <div class="languages">
+                            <span
+                                class="relative z-10 text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">html</span>
+                            <span
+                                class="z-10 relative text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">css</span>
+                            <span
+                                class="z-10 relative text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">JavaScript</span>
+                        </div>
+                    </div>
+                    <h2 class="relative z-10 my-4 text-sm leading-6">CRUDS Project using HTML & CSS & Js and responsive design that Allows you to add, edit, delete and search any number of products</h2>
+                    <div class="btns flex justify-between items-center">
+                        <a href="https://cruds-project-yw86.vercel.app/" target="_blank"><button
+                                class="relative z-10 py-3 px-3 border-solid border-white border-[2px] rounded-3xl overflow-hidden after:bg-gradient-to-r after:from-blue-950 after:to-blue-800 text-[18px]">Live
+                                Demo</button></a>
+                        <a href="https://github.com/anaswail/CRUDS-Project" target="_blank"><button
+                                class="relative z-10 py-3 px-3 border-solid border-white border-[2px] rounded-3xl overflow-hidden after:bg-gradient-to-r after:from-blue-700 after:to-purple-700 text-[18px]">GitHub
+                                Link</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="content">
+                    <div class="top">
+                        <div class="img-content relative z-10">
+                            <img class="rounded-md border-solid border-white border-[2px]"
+                                src="images/todo list.png" alt="">
+                        </div>
+                        <h1 class="relative z-10 font-bold text-xl my-3">To-Do List</h1>
+                        <div class="languages">
+                            <span
+                                class="relative z-10 text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">html</span>
+                            <span
+                                class="z-10 relative text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">tailwindCSS</span>
+                            <span
+                                class="z-10 relative text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">JavaScript</span>
+                        </div>
+                    </div>
+                    <h2 class="relative z-10 my-4 text-sm leading-6">To-Do List project Using HTML & CSS & TailwindCSS & Js with a responsive design and change mood and save the tasks in local storage</h2>
+                    <div class="btns flex justify-between items-center">
+                        <a href="https://to-do-list-2rxb.vercel.app/" target="_blank"><button
+                                class="relative z-10 py-3 px-3 border-solid border-white border-[2px] rounded-3xl overflow-hidden after:bg-gradient-to-r after:from-blue-950 after:to-blue-800 text-[18px]">Live
+                                Demo</button></a>
+                        <a href="https://github.com/anaswail/To-Do-list" target="_blank"><button
+                                class="relative z-10 py-3 px-3 border-solid border-white border-[2px] rounded-3xl overflow-hidden after:bg-gradient-to-r after:from-blue-700 after:to-purple-700 text-[18px]">GitHub
+                                Link</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="content">
+                    <div class="top">
+                        <div class="img-content relative z-10">
+                            <img class="rounded-md border-solid border-white border-[2px]"
+                                src="images/promodoro timer.png" alt="">
+                        </div>
+                        <h1 class="relative z-10 font-bold text-xl my-3">Promodoro Timer</h1>
+                        <div class="languages">
+                            <span
+                                class="relative z-10 text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">html</span>
+                            <span
+                                class="z-10 relative text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">TailwindCSS</span>
+                            <span
+                                class="z-10 relative text-xs bg-blue-800 rounded-xl p-2 cursor-pointer hover:bg-blue-900 transition-all">JavaScript</span>
+                        </div>
+                    </div>
+                    <h2 class="relative z-10 my-4 text-sm leading-6">Promodoro timer Project Using HTML & tailwindCSS & css and Js with a responsive design and change mood advantage </h2>
+                    <div class="btns flex justify-between items-center">
+                        <a href="https://to-do-list-2rxb.vercel.app/Promodoro.html" target="_blank"><button
+                                class="relative z-10 py-3 px-3 border-solid border-white border-[2px] rounded-3xl overflow-hidden after:bg-gradient-to-r after:from-blue-950 after:to-blue-800 text-[18px]">Live
+                                Demo</button></a>
+                        <a href="https://github.com/anaswail/To-Do-list" target="_blank"><button
+                                class="relative z-10 py-3 px-3 border-solid border-white border-[2px] rounded-3xl overflow-hidden after:bg-gradient-to-r after:from-blue-700 after:to-purple-700 text-[18px]">GitHub
+                                Link</button></a>
+                    </div>
+                </div>
+            </div>
 
-    </script>
-    <script src="main.js"></script>
+        </div>
+        <!-- End Projects Section  -->
+
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+        <script>
+            var typed = new Typed(".auto-type", {
+                strings: ["Programmer 💻", "Freelancer 🚀", "Ui Designer 👾", "Front-end 👨‍💻"],
+                typespped: 250,
+                backSpeed: 150,
+                looped: true,
+            })
+
+        </script>
+
+        <script src="main.js"></script>
+
 </body>
 
 </html>
