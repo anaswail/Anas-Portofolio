@@ -2953,21 +2953,21 @@ nav i:hover {
 
 /* up Button  */
 
-.upButton:hover{
+.upButton:hover {
   animation: upButton 1s linear infinite;
-  background-color:#2563eb;
+  background-color: #2563eb;
 }
 
 @keyframes upButton {
-  0%{
+  0% {
     transform: translateY(0);
   }
 
-  50%{
+  50% {
     transform: translateY(-8px);
   }
 
-  100%{
+  100% {
     transform: translateY(0);
   }
 }
@@ -3300,11 +3300,11 @@ svg {
   animation: changeBorder 4s linear infinite;
 }
 
-.service:nth-child(2){
+.service:nth-child(2) {
   animation-delay: 2s;
 }
 
-@keyframes changeBorder{
+@keyframes changeBorder {
   0% {
     transform: translateY(0);
   }
@@ -3369,10 +3369,11 @@ svg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
   width: 300px;
   height: 430px;
-  box-shadow: 0 0 5px black;
+  box-shadow: -6px -6px 10px -1px rgba(0, 0, 0, 0.7),
+        6px 6px 6px -1px #111;
 }
 
-.project::before{
+.project::before {
   content: '';
   position: absolute;
   width: 150px;
@@ -3381,7 +3382,7 @@ svg {
   animation: borderAnimation 4s linear infinite;
 }
 
-.project::after{
+.project::after {
   content: '';
   position: absolute;
   background-color: black;
@@ -3396,17 +3397,17 @@ svg {
   justify-content: space-between;
 }
 
-@keyframes borderAnimation{
-  0%{
+@keyframes borderAnimation {
+  0% {
     transform: rotate(0deg);
   }
 
-  100%{
+  100% {
     transform: rotate(360deg);
   }
 }
 
-.btns button::after{
+.btns button::after {
   content: '';
   position: absolute;
   top: 0;
@@ -3418,7 +3419,7 @@ svg {
   z-index: -1;
 }
 
-.btns button:hover::after{
+.btns button:hover::after {
   width: 100%;
 }
 

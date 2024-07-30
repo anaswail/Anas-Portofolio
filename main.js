@@ -71,7 +71,7 @@ window.onscroll = () => {
       });
       document.querySelector(".fa-icons").classList.remove("text-blue-600");
     }
-    if (scrollY >= 1000 && scrollY < 1900) {
+    if (scrollY >= 1000 && scrollY < 1700) {
       document.querySelector(".fa-icons").classList.add("text-blue-600");
     } else {
       document.querySelector(".fa-icons").classList.remove("text-blue-600");
@@ -83,7 +83,7 @@ window.onscroll = () => {
       document.querySelectorAll(".navItem")[3].classList.remove("active");
     }
 
-    if (scrollY >= 1900 && scrollY < 3200) {
+    if (scrollY >= 1700 && scrollY < 2200) {
       document
         .querySelector(".fa-wand-magic-sparkles")
         .classList.add("text-blue-600");
@@ -93,6 +93,15 @@ window.onscroll = () => {
         .classList.remove("text-blue-600");
     }
 
+    if (scrollY >= 2200 && scrollY < 5000) {
+      document
+        .querySelector(".fa-laptop-code")
+        .classList.add("text-blue-600");
+    } else {
+      document
+        .querySelector(".fa-laptop-code")
+        .classList.remove("text-blue-600");
+    }
     if (scrollY < 800) {
       count = 0;
       count2 = 0;
