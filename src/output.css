@@ -3494,6 +3494,10 @@ svg {
   border-radius: 0.75rem;
 }
 
+.hover\:rounded-lg:hover {
+  border-radius: 0.5rem;
+}
+
 .hover\:bg-blue-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
@@ -3629,6 +3633,10 @@ svg {
 
   .md\:overflow-hidden {
     overflow: hidden;
+  }
+
+  .md\:rounded-2xl {
+    border-radius: 1rem;
   }
 
   .md\:p-4 {
