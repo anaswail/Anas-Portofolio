@@ -32,6 +32,7 @@ let prograssBar = document.querySelectorAll('circle')
 let skills = document.querySelector(".skills");
 let services = document.querySelector('.services');
 let projects = document.querySelector('.projects');
+let animateSec = document.querySelectorAll('.animateSec');
 
 // Default on Scroll
 
@@ -98,6 +99,20 @@ if (scrollY < 600) {
 }
 
 window.onscroll = () => {
+  // animation when window scroll
+  animateSec.forEach((el)=>{
+    let top = window.scrollY;
+    let offset = el.offsetTop - 250;
+    let height = el.offsetHeight;
+
+    if(top >= offset && top < offset + 500 + height) {
+      el.classList.add('animate');
+    }
+    else{
+      el.classList.remove('animate');
+    }
+  })
+
   if (scrollY < 600) {
     navLeft.classList.add("remove");
     upButton.style.display = "none";
@@ -180,7 +195,7 @@ window.onscroll = () => {
     } else {
       navItems[4].classList.remove("active");
     }
-    
+
     if (scrollY < 800) {
       count = 0;
       count2 = 0;

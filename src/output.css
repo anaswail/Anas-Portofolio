@@ -3048,7 +3048,7 @@ nav i:hover {
   height: 3px;
   width: 60px;
   background-color: white;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .about-us>h1:hover::after,
@@ -3059,9 +3059,15 @@ nav i:hover {
 }
 
 .about-us img {
-  animation: moveImage 5s linear infinite;
   border: 2px solid white;
   box-shadow: 0 0 5px #fff;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.about-us.animate img{
+  opacity: 1;
+  animation: moveImage 5s linear infinite;
 }
 
 @keyframes moveImage {
@@ -3076,6 +3082,15 @@ nav i:hover {
   100% {
     transform: translate(0);
   }
+}
+
+.about-us .text-content{
+  transform: translateX(-100%);
+  transition: 1s;
+}
+
+.about-us.animate .text-content{
+  transform: translateX(0)
 }
 
 /* End about us */
@@ -3267,7 +3282,7 @@ svg {
 
 /* Start Service */
 
-.service {
+.services .service {
   display: flex;
   height: 24rem;
   width: 70%;
@@ -3285,19 +3300,29 @@ svg {
 }
 
 @media (min-width: 768px) {
-  .service {
+  .services .service {
     width: 270px;
   }
 }
 
-.service {
+.services .service {
   box-shadow: 0 0 6px #2563eb;
-  transition: 0.3s;
   animation: changeBorder 4s linear infinite;
 }
 
-.service:nth-child(2) {
+.services .service:nth-child(2) {
   animation-delay: 2s;
+}
+
+.services .container{
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 1s;
+}
+
+.services.animate .container {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @keyframes changeBorder {
