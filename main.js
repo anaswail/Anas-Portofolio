@@ -29,9 +29,9 @@ let upButton = document.querySelector(".upButton");
 let navItems = document.querySelectorAll('.navItem');
 let info = document.querySelector('.info')
 let prograssBar = document.querySelectorAll('circle')
-let skills = document.querySelector(".skills");
-let services = document.querySelector('.services');
-let projects = document.querySelector('.projects');
+let skills = document.querySelector(".skills-icon");
+let services = document.querySelector('.services-icon');
+let projects = document.querySelector('.projects-icon');
 let animateSec = document.querySelectorAll('.animateSec');
 
 // Default on Scroll

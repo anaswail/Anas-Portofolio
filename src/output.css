@@ -663,6 +663,10 @@ video {
   left: -6rem;
 }
 
+.-top-4 {
+  top: -1rem;
+}
+
 .-top-\[20\%\] {
   top: -20%;
 }
@@ -803,6 +807,10 @@ video {
   margin-left: 0.25rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -922,6 +930,10 @@ video {
   height: 2.75rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-\[250px\] {
   height: 250px;
 }
@@ -943,12 +955,20 @@ video {
   height: 100lvh;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .w-11 {
   width: 2.75rem;
 }
 
 .w-\[250px\] {
   width: 250px;
+}
+
+.w-\[500px\] {
+  width: 500px;
 }
 
 .w-\[90\%\] {
@@ -2196,6 +2216,10 @@ video {
   padding-bottom: 10rem;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -3080,7 +3104,8 @@ nav i:hover {
 .about-us>h1::after,
 .skills>h1::after,
 .services>h1::after,
-.projects>h1::after {
+.projects>h1::after,
+.contact>h1::after {
   content: '';
   position: absolute;
   bottom: -15px;
@@ -3095,7 +3120,8 @@ nav i:hover {
 .about-us>h1:hover::after,
 .skills>h1:hover::after,
 .services>h1:hover::after,
-.projects>h1:hover::after {
+.projects>h1:hover::after,
+.contact>h1:hover::after {
   width: 100%;
 }
 
@@ -3519,6 +3545,46 @@ svg {
   width: 100%;
 }
 
+.contact-info input{
+  background-color: #09090b;
+  border-radius: 5px;
+  border: 2px solid white;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  outline: none;
+}
+
+.contact-info button{
+  border-radius: 5px;
+  border: 2px solid white;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  outline: none;
+  background-color: black;
+  box-shadow: -6px -6px 10px -1px rgba(0, 0, 0, 0.7),
+        6px 6px 6px -1px #111;
+}
+
+.myLinks .link {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  height: 50px;
+  width: 200px;
+  align-items: center;
+  border-radius: 1.5rem;
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding: 1.25rem;
+}
+
+.myLinks .link i{
+}
+
 /* End Projects  */
 
 @media (min-width: 640px) {
@@ -3588,10 +3654,10 @@ svg {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.after\:from-green-900::after {
+.after\:from-green-700::after {
   content: var(--tw-content);
-  --tw-gradient-from: #14532d var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(20 83 45 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: #15803d var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(21 128 61 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -3612,9 +3678,9 @@ svg {
   --tw-gradient-to: #1e40af var(--tw-gradient-to-position);
 }
 
-.after\:to-green-700::after {
+.after\:to-green-500::after {
   content: var(--tw-content);
-  --tw-gradient-to: #15803d var(--tw-gradient-to-position);
+  --tw-gradient-to: #22c55e var(--tw-gradient-to-position);
 }
 
 .after\:to-neutral-700::after {

@@ -232,7 +232,8 @@ nav i {
 .about-us>h1::after,
 .skills>h1::after,
 .services>h1::after,
-.projects>h1::after {
+.projects>h1::after,
+.contact>h1::after {
     content: '';
     position: absolute;
     bottom: -15px;
@@ -247,7 +248,8 @@ nav i {
 .about-us>h1:hover::after,
 .skills>h1:hover::after,
 .services>h1:hover::after,
-.projects>h1:hover::after {
+.projects>h1:hover::after,
+.contact>h1:hover::after {
     width: 100%;
 }
 
@@ -592,7 +594,34 @@ svg {
     width: 100%;
 }
 
+.contact-info input{
+    background-color: #09090b;
+    border-radius: 5px;
+    border: 2px solid white;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    outline: none;
+}
 
+.contact-info button{
+    border-radius: 5px;
+    border: 2px solid white;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    outline: none;
+    background-color: black;
+    box-shadow: -6px -6px 10px -1px rgba(0, 0, 0, 0.7),
+        6px 6px 6px -1px #111;
+}
 
+.myLinks .link{
+    @apply flex items-center h-[50px] w-[200px] mr-[5px] mb-[5px] border-solid border-[1px] border-white rounded-3xl p-5;
+}
+
+.myLinks .link i{
+    
+}
 
 /* End Projects  */
