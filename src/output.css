@@ -771,6 +771,11 @@ video {
   clear: none;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -794,12 +799,20 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-5 {
@@ -905,6 +918,10 @@ video {
   display: none;
 }
 
+.h-11 {
+  height: 2.75rem;
+}
+
 .h-\[250px\] {
   height: 250px;
 }
@@ -924,6 +941,10 @@ video {
 
 .h-lvh {
   height: 100lvh;
+}
+
+.w-11 {
+  width: 2.75rem;
 }
 
 .w-\[250px\] {
@@ -1488,6 +1509,10 @@ video {
 
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-6 {
@@ -3034,6 +3059,22 @@ nav i:hover {
   width: 100%;
 }
 
+.socialLinks a::after{
+  content: '';
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.socialLinks a:hover::after{
+  height: 100%;
+}
+
 /* Start About us */
 
 .about-us>h1::after,
@@ -3221,45 +3262,77 @@ circle {
   animation: animateCircle7 2s linear forwards;
 }
 
-@keyframes animateCircle {
-  100% {
+@media (max-width: 768px) {
+  .circle1 {
     stroke-dashoffset: 65;
   }
-}
 
-@keyframes animateCircle2 {
-  100% {
+  .circle2 {
     stroke-dashoffset: 79;
   }
-}
 
-@keyframes animateCircle3 {
-  100% {
-    stroke-dashoffset: 180;
+  .circle3 {
+    stroke-dashoffset: 180
   }
-}
 
-@keyframes animateCircle4 {
-  100% {
-    stroke-dashoffset: 120;
-  }
-}
-
-@keyframes animateCircle5 {
-  100% {
+  .circle4 {
     stroke-dashoffset: 160;
   }
-}
 
-@keyframes animateCircle6 {
-  100% {
+  .circle5 {
+    stroke-dashoffset: 160;
+  }
+
+  .circle6 {
     stroke-dashoffset: 235;
+  }
+
+  .circle7 {
+    stroke-dashoffset: 170;
   }
 }
 
-@keyframes animateCircle7 {
-  100% {
-    stroke-dashoffset: 170;
+@media (min-width: 768px) {
+  @keyframes animateCircle {
+    100% {
+      stroke-dashoffset: 65;
+    }
+  }
+
+  @keyframes animateCircle2 {
+    100% {
+      stroke-dashoffset: 79;
+    }
+  }
+
+  @keyframes animateCircle3 {
+    100% {
+      stroke-dashoffset: 180;
+    }
+  }
+
+  @keyframes animateCircle4 {
+    100% {
+      stroke-dashoffset: 120;
+    }
+  }
+
+  @keyframes animateCircle5 {
+    100% {
+      stroke-dashoffset: 160;
+    }
+  }
+
+  @keyframes animateCircle6 {
+    100% {
+      stroke-dashoffset: 235;
+    }
+  }
+
+  @keyframes animateCircle7 {
+    100% {
+      stroke-dashoffset: 170;
+    }
   }
 }
 
@@ -3482,6 +3555,11 @@ svg {
   }
 }
 
+.after\:bg-gradient-to-b::after {
+  content: var(--tw-content);
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
 .after\:bg-gradient-to-r::after {
   content: var(--tw-content);
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
@@ -3494,6 +3572,13 @@ svg {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.after\:from-blue-900::after {
+  content: var(--tw-content);
+  --tw-gradient-from: #1e3a8a var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(30 58 138 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .after\:from-blue-950::after {
   content: var(--tw-content);
   --tw-gradient-from: #172554 var(--tw-gradient-from-position);
@@ -3501,9 +3586,38 @@ svg {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.after\:from-green-900::after {
+  content: var(--tw-content);
+  --tw-gradient-from: #14532d var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(20 83 45 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.after\:from-neutral-900::after {
+  content: var(--tw-content);
+  --tw-gradient-from: #171717 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(23 23 23 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.after\:to-blue-700::after {
+  content: var(--tw-content);
+  --tw-gradient-to: #1d4ed8 var(--tw-gradient-to-position);
+}
+
 .after\:to-blue-800::after {
   content: var(--tw-content);
   --tw-gradient-to: #1e40af var(--tw-gradient-to-position);
+}
+
+.after\:to-green-700::after {
+  content: var(--tw-content);
+  --tw-gradient-to: #15803d var(--tw-gradient-to-position);
+}
+
+.after\:to-neutral-700::after {
+  content: var(--tw-content);
+  --tw-gradient-to: #404040 var(--tw-gradient-to-position);
 }
 
 .after\:to-purple-700::after {
