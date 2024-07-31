@@ -469,7 +469,7 @@ svg {
     width: 150px;
     height: 140%;
     background: linear-gradient(#1700FF, #00ccff);
-    animation: borderAnimation 4s linear infinite;
+    animation: borderAnimation 6s linear infinite;
 }
 
 .project::after {
