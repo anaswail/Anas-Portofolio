@@ -3380,7 +3380,7 @@ svg {
 
 .services .service {
   box-shadow: 0 0 6px #2563eb;
-  animation: changeBorder 4s linear infinite;
+  animation: moveUp 4s linear infinite;
 }
 
 .services .service:nth-child(2) {
@@ -3398,17 +3398,19 @@ svg {
   opacity: 1;
 }
 
-@keyframes changeBorder {
-  0% {
-    transform: translateY(0);
-  }
+@media (min-width: 768px) {
+  @keyframes moveUp {
+    0% {
+      transform: translateY(0);
+    }
 
-  50% {
-    transform: translateY(-10px);
-  }
+    50% {
+      transform: translateY(-10px);
+    }
 
-  100% {
-    transform: translateY(0);
+    100% {
+      transform: translateY(0);
+    }
   }
 }
 
