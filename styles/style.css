@@ -412,7 +412,7 @@ svg {
 
 /* Start Service */
 .service {
-    @apply border-solid border-[2px] border-[#2563eb] text-white p-8 h-96 rounded-md flex flex-col items-center justify-between w-[70%] md:w-1/4;
+    @apply border-solid border-[2px] border-[#2563eb] text-white p-8 h-96 rounded-md flex flex-col items-center justify-between w-[70%] md:w-[270px];
     box-shadow: 0 0 6px #2563eb;
     transition: 0.3s;
     animation: changeBorder 4s linear infinite;

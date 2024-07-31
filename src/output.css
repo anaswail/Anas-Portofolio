@@ -1810,10 +1810,6 @@ video {
   border-radius: 0.25rem;
 }
 
-.rounded-2xl {
-  border-radius: 1rem;
-}
-
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -3290,7 +3286,7 @@ svg {
 
 @media (min-width: 768px) {
   .service {
-    width: 25%;
+    width: 270px;
   }
 }
 
@@ -3379,7 +3375,7 @@ svg {
   width: 150px;
   height: 140%;
   background: linear-gradient(#1700FF, #00ccff);
-  animation: borderAnimation 4s linear infinite;
+  animation: borderAnimation 6s linear infinite;
 }
 
 .project::after {
@@ -3488,10 +3484,6 @@ svg {
 .after\:to-purple-700::after {
   content: var(--tw-content);
   --tw-gradient-to: #7e22ce var(--tw-gradient-to-position);
-}
-
-.hover\:rounded-xl:hover {
-  border-radius: 0.75rem;
 }
 
 .hover\:rounded-lg:hover {
