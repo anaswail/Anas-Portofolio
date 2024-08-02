@@ -32,6 +32,7 @@ let prograssBar = document.querySelectorAll('circle')
 let skills = document.querySelector(".skills-icon");
 let services = document.querySelector('.services-icon');
 let projects = document.querySelector('.projects-icon');
+let contact = document.querySelector('.fa-phone-volume');
 let animateSec = document.querySelectorAll('.animateSec');
 
 // Default on Scroll
@@ -96,6 +97,21 @@ if (scrollY < 600) {
   } else {
     navItems[4].classList.remove("active");
   }
+
+
+  let contactSection = document.getElementById('contact');
+    if(scrollY >= contactSection.offsetTop - 200) {
+      upButton.classList.add('active');
+      contact.classList.add("text-blue-600");
+      navItems[4].classList.add("active");
+
+    } 
+    else{
+      upButton.classList.remove('active');
+      contact.classList.remove("text-blue-600");
+      navItems[4].classList.remove("active");
+    }
+
 }
 
 window.onscroll = () => {
@@ -140,6 +156,7 @@ window.onscroll = () => {
     if (scrollY >= 600 && scrollY < 1000) {
       info.classList.add("text-blue-600");
       navItems[1].classList.add("active");
+
     } else {
       info.classList.remove("text-blue-600");
       navItems[1].classList.remove("active");
@@ -184,17 +201,37 @@ window.onscroll = () => {
     }
 
     // projects active on scroll
-    if (scrollY >= 2200 && scrollY < 5000) {
+
+    let projectSection = document.getElementById('projects');
+    if(scrollY >= projectSection.offsetTop - 200){
       projects.classList.add("text-blue-600");
-    } else {
+    }
+    else{
       projects.classList.remove("text-blue-600");
     }
 
-    if (scrollY >= 4600 && scrollY < 9000) {
+    let contactSection = document.getElementById('contact');
+    if(scrollY >= contactSection.offsetTop - 200) {
+      upButton.classList.add('active');
+      contact.classList.add("text-blue-600");
       navItems[4].classList.add("active");
-    } else {
+      projects.classList.remove("text-blue-600");
+
+    } 
+    else{
+      upButton.classList.remove('active');
+      contact.classList.remove("text-blue-600");
       navItems[4].classList.remove("active");
     }
+
+    if(scrollY >= 9000) {
+      navItems[5].classList.add("active");
+    }
+    else{
+      navItems[5].classList.remove("active");
+    }
+
+
 
     if (scrollY < 800) {
       count = 0;
@@ -259,3 +296,31 @@ setInterval(() => {
     number7.innerHTML = count7 + "%";
   }
 }, 20);
+
+
+// send massage to whatsapp
+
+function sendWhatsapp () {
+  let name = document.getElementById('name').value;
+  let phone = document.getElementById('phoneNumber').value;
+  let mail = document.getElementById('email').value;
+  let msg = document.getElementById('msg').value;
+  let send = document.querySelector('.submitButton');
+  let myNumber = "+201050305754";
+
+  var url = "https://wa.me/" + myNumber + "?text="
+  + "Name : " +name+ "%0a"
+  + "=============" + "%0a"
+  + "Phone : " +phone+ "%0a"
+  + "=============" + "%0a"
+  + "Email : " +mail+ "%0a"
+  + "=============" + "%0a"
+  + "Massage : " +msg+ "%0a%0a";
+  name = "";
+  phone = "";
+  mail = "";
+  msg = "";
+  window.open(url, "_blank").focus();
+  location.reload();
+
+}

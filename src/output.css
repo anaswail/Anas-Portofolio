@@ -938,6 +938,10 @@ video {
   height: 250px;
 }
 
+.h-\[350px\] {
+  height: 350px;
+}
+
 .h-\[90\%\] {
   height: 90%;
 }
@@ -965,10 +969,6 @@ video {
 
 .w-\[250px\] {
   width: 250px;
-}
-
-.w-\[500px\] {
-  width: 500px;
 }
 
 .w-\[90\%\] {
@@ -2220,6 +2220,10 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.pb-60 {
+  padding-bottom: 15rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -2432,6 +2436,11 @@ video {
 .text-green-500 {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+.text-neutral-500 {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
 .text-neutral-700 {
@@ -2998,7 +3007,8 @@ nav i:hover {
 
 /* up Button  */
 
-.upButton:hover {
+.upButton:hover,
+.upButton.active {
   animation: upButton 1s linear infinite;
   background-color: #2563eb;
 }
@@ -3568,21 +3578,68 @@ svg {
 }
 
 .myLinks .link {
+  position: relative;
   margin-right: 5px;
   margin-bottom: 5px;
   display: flex;
-  height: 50px;
-  width: 200px;
+  height: 60px;
+  width: 100%;
+  cursor: pointer;
   align-items: center;
+  gap: 1.5rem;
+  overflow: hidden;
   border-radius: 1.5rem;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
   padding: 1.25rem;
 }
 
-.myLinks .link i{
+@media (min-width: 768px) {
+  .myLinks .link {
+    width: 45%;
+    gap: 0px;
+  }
+}
+
+.myLinks .link i {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.myLinks .link::after{
+  content: '';
+  width: 0;
+  height: 100%;
+  border-radius: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.contact .contact-info{
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 1s;
+}
+
+.contact.animate .contact-info{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.contact .myLinks{
+  transform: translateX(100%);
+  transition: 1s;
+  opacity: 0;
+}
+
+.contact.animate .myLinks{
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /* End Projects  */
@@ -3633,6 +3690,13 @@ svg {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.after\:from-blue-600::after {
+  content: var(--tw-content);
+  --tw-gradient-from: #2563eb var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(37 99 235 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .after\:from-blue-700::after {
   content: var(--tw-content);
   --tw-gradient-from: #1d4ed8 var(--tw-gradient-from-position);
@@ -3668,6 +3732,11 @@ svg {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.after\:to-blue-500::after {
+  content: var(--tw-content);
+  --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
+}
+
 .after\:to-blue-700::after {
   content: var(--tw-content);
   --tw-gradient-to: #1d4ed8 var(--tw-gradient-to-position);
@@ -3691,6 +3760,21 @@ svg {
 .after\:to-purple-700::after {
   content: var(--tw-content);
   --tw-gradient-to: #7e22ce var(--tw-gradient-to-position);
+}
+
+.after\:to-red-600::after {
+  content: var(--tw-content);
+  --tw-gradient-to: #dc2626 var(--tw-gradient-to-position);
+}
+
+.after\:to-white::after {
+  content: var(--tw-content);
+  --tw-gradient-to: #fff var(--tw-gradient-to-position);
+}
+
+.after\:to-black::after {
+  content: var(--tw-content);
+  --tw-gradient-to: #000 var(--tw-gradient-to-position);
 }
 
 .hover\:rounded-lg:hover {
@@ -3719,6 +3803,11 @@ svg {
 .hover\:before\:text-center:hover::before {
   content: var(--tw-content);
   text-align: center;
+}
+
+.hover\:after\:w-full:hover::after {
+  content: var(--tw-content);
+  width: 100%;
 }
 
 .focus\:hover\:text-center:hover:focus {
@@ -3768,6 +3857,10 @@ svg {
     top: 2.5rem;
   }
 
+  .md\:mr-4 {
+    margin-right: 1rem;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
@@ -3784,8 +3877,20 @@ svg {
     height: 100lvh;
   }
 
+  .md\:h-screen {
+    height: 100vh;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
   .md\:w-\[350px\] {
     width: 350px;
+  }
+
+  .md\:w-\[400px\] {
+    width: 400px;
   }
 
   .md\:w-\[70\%\] {
@@ -3814,6 +3919,10 @@ svg {
     align-items: flex-start;
   }
 
+  .md\:justify-center {
+    justify-content: center;
+  }
+
   .md\:justify-between {
     justify-content: space-between;
   }
@@ -3840,6 +3949,11 @@ svg {
 
   .md\:p-4 {
     padding: 1rem;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .md\:px-20 {
@@ -3895,6 +4009,10 @@ svg {
 }
 
 @media (min-width: 1024px) {
+  .lg\:w-\[500px\] {
+    width: 500px;
+  }
+
   .lg\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;

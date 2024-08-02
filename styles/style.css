@@ -128,7 +128,8 @@ nav i {
 /* End Main Nav */
 
 /* up Button  */
-.upButton:hover {
+.upButton:hover,
+.upButton.active {
     animation: upButton 1s linear infinite;
     background-color: #2563eb;
 }
@@ -617,11 +618,45 @@ svg {
 }
 
 .myLinks .link{
-    @apply flex items-center h-[50px] w-[200px] mr-[5px] mb-[5px] border-solid border-[1px] border-white rounded-3xl p-5;
+    @apply flex items-center gap-6 md:gap-0 overflow-hidden cursor-pointer h-[60px] w-full md:w-[45%] mr-[5px] mb-[5px] border-solid border-[2px] border-white rounded-3xl p-5 relative ;
 }
 
 .myLinks .link i{
-    
+    @apply text-2xl mr-2 ;
 }
 
+.myLinks .link::after{
+    content: '';
+    width: 0;
+    height: 100%;
+    border-radius: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.contact .contact-info{
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: 1s;
+}
+
+.contact.animate .contact-info{
+    transform: translateX(0);
+    opacity: 1;
+
+}
+
+.contact .myLinks{
+    transform: translateX(100%);
+    transition: 1s;
+    opacity: 0;
+}
+
+.contact.animate .myLinks{
+    transform: translateX(0);
+    opacity: 1;
+
+}
 /* End Projects  */

@@ -46,13 +46,13 @@
             </a>
         </ul>
         <ul class="absolute bottom-1">
-            <a href="">
+            <a href="https://wa.link/e3husy">
                 <li><i class="fa-brands fa-whatsapp text-green-500 text-3xl"></i></li>
             </a>
-            <a href="">
+            <a href="https://github.com/anaswail">
                 <li><i class="fa-brands fa-github text-neutral-700 text-3xl"></i></li>
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/in/anas-wael-a0951431b/">
                 <li><i class="fa-brands fa-linkedin text-blue-600 text-3xl"></i></li>
             </a>
         </ul>
@@ -102,9 +102,9 @@
                         class="relative p-3 border-white border-solid border-[2px] rounded-xl text-white ">Download
                         Resume</button></a>
                 <div class="socialLinks text-white text-2xl font-bold mt-4 ml-1 gap-2 flex">
-                    <a href="#" class="border-solid border-[2px] border-white w-11 h-11 bg-black flex items-center justify-center text-white rounded-[50%] relative after:bg-gradient-to-b after:from-green-700 after:to-green-500 overflow-hidden" ><i class="fa-brands fa-whatsapp cursor-pointer z-10 "></i></a>
-                    <a href="#" class="border-solid border-[2px] border-white w-11 h-11 bg-black flex items-center justify-center text-white rounded-[50%] relative after:bg-gradient-to-b after:from-blue-900 after:to-blue-700 overflow-hidden" ><i class="fa-brands fa-facebook cursor-pointer z-10 mx-4"></i></a>
-                    <a href="#" class="border-solid border-[2px] border-white w-11 h-11 bg-black flex items-center justify-center text-white rounded-[50%] relative after:bg-gradient-to-b after:from-neutral-900 after:to-neutral-700 overflow-hidden" ><i class="fa-brands fa-github cursor-pointer z-10"></i></a>
+                    <a href="https://wa.link/e3husy" class="border-solid border-[2px] border-white w-11 h-11 bg-black flex items-center justify-center text-white rounded-[50%] relative after:bg-gradient-to-b after:from-green-700 after:to-green-500 overflow-hidden" ><i class="fa-brands fa-whatsapp cursor-pointer z-10 "></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100053090326397" class="border-solid border-[2px] border-white w-11 h-11 bg-black flex items-center justify-center text-white rounded-[50%] relative after:bg-gradient-to-b after:from-blue-900 after:to-blue-700 overflow-hidden" ><i class="fa-brands fa-facebook cursor-pointer z-10 mx-4"></i></a>
+                    <a href="https://github.com/anaswail" class="border-solid border-[2px] border-white w-11 h-11 bg-black flex items-center justify-center text-white rounded-[50%] relative after:bg-gradient-to-b after:from-neutral-900 after:to-neutral-700 overflow-hidden" ><i class="fa-brands fa-github cursor-pointer z-10"></i></a>
                 </div>
             </div>
             <div class="img-content">
@@ -594,50 +594,59 @@
     </div>
     <!-- End Projects Section  -->
 
-    <!-- <div id="contact" class="contact relative animateSec bg-black">
+    <!-- Start Contact Section  -->
+    <div id="contact" class="contact relative animateSec bg-black h-fit">
         <h1 class="text-white text-3xl absolute top-0 left-1/2 -translate-x-1/2 mt-5 ">Contact</h1>
-        <div class="container overflow-hidden mx-auto flex items-center h-full md:mt-0 md:pt-[8%] md:h-lvh pt-[30%] md:justify-between justify-center gap-6 md:gap-0 md:flex-row flex-col-reverse px-5 md:px-20 pb-10 md:pb-0">>
-            <div class="contact-info w-[500px] border-solid border-white border-[2px] rounded-xl p-5 relative">
+        <div class="container overflow-hidden mx-auto flex h-full md:mt-0 md:pt-[8%] md:h-screen pt-[30%] md:justify-center justify-between items-center gap-6 md:gap-0 md:flex-row px-5 md:px-10 pb-60 md:pb-0 flex-col">>
+            <div class="contact-info  w-[90%] md:w-[400px] lg:w-[500px] h-[350px] border-solid border-white border-[2px] rounded-xl p-5 relative md:mr-4 ">
                 <h2 class="text-white text-xl absolute -top-4 z-10 bg-black px-2 left-1/2 -translate-x-1/2">Get In Touch</h2>
                 <form class="flex flex-col mt-4">
                     <div class="top flex items-center mb-3">
                         <input type="text" id="name" class="w-1/2 mr-2" placeholder="Name">
-                        <input type="text" id="phoneNumber" class="1/2" placeholder="Phone Number">
+                        <input type="text" id="phoneNumber" class="w-1/2" placeholder="Phone Number">
                     </div>
-                    <input type="email" placeholder="email">
-                    <textarea name="massage" class="msg bg-zinc-950 text-white outline-none border-solid border-white border-[2px] my-3 h-20 p-2" placeholder="Enter the massage"></textarea>
-                    <button type="submit" class="submitButton cursor-pointer " >Send</button>
+                    <input type="email" placeholder="email" id="email">
+                    <textarea name="massage" id="msg" class="msg bg-zinc-950 text-white outline-none border-solid border-white border-[2px] my-3 h-20 p-2" placeholder="Enter the massage"></textarea>
+                    <button type="submit" class="submitButton cursor-pointer" onclick="sendWhatsapp()">Send</button>
                 </form>
             </div>
 
-            <div class="myLinks text-white w-[500px] flex flex-wrap">
-                <div class="link whatsapp ">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <h2>Whatsapp</h2>
-                </div>
-                <div class="link github">
-                    <i class="fa-brands fa-github"></i>
-                    <h2>GitHub</h2>
-                </div>
-                <div class="link linkedin">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <h2>LinkedIn</h2>
-                </div>
-                <div class="link facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                    <h2>FaceBook</h2>
-                </div>
-                <div class="link gmail">
-                    <i class="fa-solid fa-envelope"></i>
-                    <h2>Email</h2>
-                </div>
-                <div class="link phoneNumber">
-                    <i class="fa-solid fa-phone"></i>
-                    <h2>Whatsapp</h2>
-                </div>
+            <div class="myLinks text-white w-[90%] md:w-1/2 h-[250px] flex flex-wrap gap-2">
+                <a href="https://wa.link/e3husy" class="link whatsapp after:bg-gradient-to-r after:from-green-700 after:to-green-500 hover:after:w-full">
+                    <i class="fa-brands fa-whatsapp z-10"></i>
+                    <h2 class="z-10">Whatsapp</h2>
+                </a>
+                <a href="https://github.com/anaswail" class="link github after:bg-gradient-to-r after:from-neutral-900 after:to-neutral-700 hover:after:w-full">
+                    <i class="fa-brands fa-github github z-10"></i>
+                    <h2 class="z-10">GitHub</h2>
+                </a>
+                <a href="https://www.linkedin.com/in/anas-wael-a0951431b/" class="link linkedin after:bg-gradient-to-r after:from-blue-950 after:to-blue-800 hover:after:w-full">
+                    <i class="fa-brands fa-linkedin linkedin z-10"></i>
+                    <h2 class="z-10">LinkedIn</h2>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100053090326397" class="link facebook after:bg-gradient-to-r after:from-blue-700 after:to-blue-500 hover:after:w-full">
+                    <i class="fa-brands fa-facebook facebook z-10"></i>
+                    <h2 class="z-10">FaceBook</h2>
+                </a>
+                <a href="mailto:anaswail246@gmail.com" class="link gmail after:bg-gradient-to-r after:from-blue-600 after:to-red-600 hover:after:w-full">
+                    <i class="fa-solid fa-envelope email z-10"></i>
+                    <h2 class="z-10">Email</h2>
+                </a>
+                <a href="tel:+201050305754" class="link phoneNumber after:bg-gradient-to-r after:from-blue-600 after:to-black hover:after:w-full">
+                    <i class="fa-solid fa-phone phone z-10"></i>
+                    <h2 class="text-xs z-10">+20 1050305754</h2>
+                </a>
             </div>
         </div>
-    </div> -->
+    </div>
+    <!-- End Contact Section  -->
+
+    <!-- Start Fotter-->
+     <footer class="flex justify-center items-center p-5">
+        <h2 class="text-neutral-500">Copyright © 2024. Anas Wael, All Rights Reserved.</h2>
+     </footer>
+    <!-- End Fotter -->
+
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
