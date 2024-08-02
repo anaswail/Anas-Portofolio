@@ -2208,6 +2208,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -2333,6 +2338,10 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[10px\] {
+  font-size: 10px;
 }
 
 .font-bold {
@@ -3732,6 +3741,11 @@ svg {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.after\:to-black::after {
+  content: var(--tw-content);
+  --tw-gradient-to: #000 var(--tw-gradient-to-position);
+}
+
 .after\:to-blue-500::after {
   content: var(--tw-content);
   --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
@@ -3765,16 +3779,6 @@ svg {
 .after\:to-red-600::after {
   content: var(--tw-content);
   --tw-gradient-to: #dc2626 var(--tw-gradient-to-position);
-}
-
-.after\:to-white::after {
-  content: var(--tw-content);
-  --tw-gradient-to: #fff var(--tw-gradient-to-position);
-}
-
-.after\:to-black::after {
-  content: var(--tw-content);
-  --tw-gradient-to: #000 var(--tw-gradient-to-position);
 }
 
 .hover\:rounded-lg:hover {
@@ -3951,6 +3955,10 @@ svg {
     padding: 1rem;
   }
 
+  .md\:p-5 {
+    padding: 1.25rem;
+  }
+
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -4005,6 +4013,21 @@ svg {
 
   .md\:text-\[20px\] {
     font-size: 20px;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
