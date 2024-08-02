@@ -205,29 +205,26 @@ window.onscroll = () => {
     let projectSection = document.getElementById('projects');
     if(scrollY >= projectSection.offsetTop - 200){
       projects.classList.add("text-blue-600");
+      navItems[4].classList.add("active");
+
     }
     else{
       projects.classList.remove("text-blue-600");
+      navItems[4].classList.remove("active");
+
     }
 
     let contactSection = document.getElementById('contact');
     if(scrollY >= contactSection.offsetTop - 200) {
       upButton.classList.add('active');
       contact.classList.add("text-blue-600");
-      navItems[4].classList.add("active");
+      navItems[5].classList.add("active");
       projects.classList.remove("text-blue-600");
 
     } 
     else{
       upButton.classList.remove('active');
       contact.classList.remove("text-blue-600");
-      navItems[4].classList.remove("active");
-    }
-
-    if(scrollY >= 9000) {
-      navItems[5].classList.add("active");
-    }
-    else{
       navItems[5].classList.remove("active");
     }
 
