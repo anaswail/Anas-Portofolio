@@ -26,6 +26,48 @@
     scroll-behavior: smooth;
 }
 
+/* Start loading page */
+.loading-page {
+    @apply bg-black fixed top-0 left-0 w-full h-[100vh] flex items-center flex-col justify-center z-50;
+    transition: opacity 1s , visibility 1s;
+    opacity: 1;
+}
+
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-page h1 {
+    @apply font-bold text-2xl md:text-4xl relative z-50 text-white mt-3;
+    letter-spacing: 2px;    
+    mix-blend-mode: difference; 
+}
+
+.loading-page img {
+    @apply w-36 md:w-44;
+}
+
+.loading-page h1::after {
+    content: '';
+    @apply absolute top-0 left-0 w-[30px] md:w-[50px] h-full bg-white;
+    mix-blend-mode: difference;
+    animation: animateText 5s linear infinite;
+}
+
+@keyframes animateText {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 30px);
+    }
+    100% {
+        left: 0;
+    }
+}
+/* End loading page  */
+
 /* Start Main Nav */
 
 .navItem {
@@ -612,9 +654,17 @@ svg {
     color: white;
     padding: 10px;
     outline: none;
-    background-color: black;
+    background-color: #060606;
     box-shadow: -6px -6px 10px -1px rgba(0, 0, 0, 0.7),
         6px 6px 6px -1px #111;
+    transition: 0.2s;
+}
+
+.contact-info button:hover{
+    box-shadow: -6px -6px 15px -1px rgba(0, 0, 0, 0.7),
+                6px 6px 15px -1px #111;
+    background-color: black;
+    transform: scale(1.03);
 }
 
 .myLinks .link{
