@@ -327,6 +327,5 @@ window.addEventListener("load", ()=>{
   const loader = document.querySelector('.loading-page');
   loader.classList.add("hidden");
   loader.addEventListener("transitionend", ()=>{
-    document.body.removeChild("loading-page")
   })
 })

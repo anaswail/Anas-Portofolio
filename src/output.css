@@ -2885,7 +2885,7 @@ video {
   justify-content: center;
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  transition: opacity 0.75s , visibility 0.75s;
+  transition: opacity 1s , visibility 1s;
   opacity: 1;
 }
 
@@ -2924,42 +2924,6 @@ video {
 @media (min-width: 768px) {
   .loading-page img {
     width: 11rem;
-  }
-}
-
-.loading-page h1::after {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 30px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-@media (min-width: 768px) {
-  .loading-page h1::after {
-    width: 50px;
-  }
-}
-
-.loading-page h1::after {
-  mix-blend-mode: difference;
-  animation: animateText 5s linear infinite;
-}
-
-@keyframes animateText {
-  0% {
-    left: 0;
-  }
-
-  50% {
-    left: calc(100% - 30px);
-  }
-
-  100% {
-    left: 0;
   }
 }
 
@@ -3919,6 +3883,12 @@ svg {
 
 .hover\:focus\:text-center:focus:hover {
   text-align: center;
+}
+
+@media not all and (min-width: 768px) {
+  .max-md\:hidden {
+    display: none;
+  }
 }
 
 @media (min-width: 640px) {

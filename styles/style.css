@@ -48,24 +48,7 @@
     @apply w-36 md:w-44;
 }
 
-.loading-page h1::after {
-    content: '';
-    @apply absolute top-0 left-0 w-[30px] md:w-[50px] h-full bg-white;
-    mix-blend-mode: difference;
-    animation: animateText 5s linear infinite;
-}
 
-@keyframes animateText {
-    0% {
-        left: 0;
-    }
-    50% {
-        left: calc(100% - 30px);
-    }
-    100% {
-        left: 0;
-    }
-}
 /* End loading page  */
 
 /* Start Main Nav */
