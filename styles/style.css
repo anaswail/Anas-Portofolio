@@ -29,19 +29,19 @@
 /* Start loading page */
 .loading-page {
     @apply bg-black fixed top-0 left-0 w-full h-[100vh] flex items-center flex-col justify-center z-50;
-    transition: opacity 1s , visibility 1s;
+    transition: opacity 1s, visibility 1s;
     opacity: 1;
 }
 
-.hidden{
+.hidden {
     opacity: 0;
     visibility: hidden;
 }
 
 .loading-page h1 {
     @apply font-bold text-2xl md:text-4xl relative z-50 text-white mt-3;
-    letter-spacing: 2px;    
-    mix-blend-mode: difference; 
+    letter-spacing: 2px;
+    mix-blend-mode: difference;
 }
 
 .loading-page img {
@@ -238,7 +238,7 @@ nav i {
     width: 100%;
 }
 
-.socialLinks a::after{
+.socialLinks a::after {
     content: '';
     width: 100%;
     height: 0;
@@ -247,10 +247,11 @@ nav i {
     left: 0;
     background-color: black;
     border-radius: 50%;
-    transition: 0.5s;;
+    transition: 0.5s;
+    ;
 }
 
-.socialLinks a:hover::after{
+.socialLinks a:hover::after {
     height: 100%;
 }
 
@@ -286,7 +287,7 @@ nav i {
     opacity: 0;
 }
 
-.about-us.animate img{
+.about-us.animate img {
     opacity: 1;
     animation: moveImage 5s linear infinite;
 }
@@ -305,12 +306,12 @@ nav i {
     }
 }
 
-.about-us .text-content{
+.about-us .text-content {
     transform: translateX(-100%);
     transition: 1s;
 }
 
-.about-us.animate .text-content{
+.about-us.animate .text-content {
     transform: translateX(0)
 }
 
@@ -416,76 +417,75 @@ circle {
     animation: animateCircle7 2s linear forwards;
 }
 
-@media (max-width: 768px) {
-    .circle1 {
-        stroke-dashoffset: 65;
-    }
-
-    .circle2 {
-        stroke-dashoffset: 79;
-    }
-
-    .circle3 {
-        stroke-dashoffset: 180
-    }
-
-    .circle4 {
-        stroke-dashoffset: 120;
-    }
-
-    .circle4 {
-        stroke-dashoffset: 160;
-    }
-
-    .circle5 {
-        stroke-dashoffset: 160;
-    }
-
-    .circle6 {
-        stroke-dashoffset: 235;
-    }
-
-    .circle7 {
-        stroke-dashoffset: 170;
-    }
+.circle1 {
+    stroke-dashoffset: 65;
 }
+
+.circle2 {
+    stroke-dashoffset: 79;
+}
+
+.circle3 {
+    stroke-dashoffset: 180
+}
+
+.circle4 {
+    stroke-dashoffset: 120;
+}
+
+.circle4 {
+    stroke-dashoffset: 160;
+}
+
+.circle5 {
+    stroke-dashoffset: 160;
+}
+
+.circle6 {
+    stroke-dashoffset: 235;
+}
+
+.circle7 {
+    stroke-dashoffset: 170;
+}
+
 @media (min-width: 768px) {
     @keyframes animateCircle {
         100% {
             stroke-dashoffset: 65;
         }
     }
-    
+
     @keyframes animateCircle2 {
         100% {
             stroke-dashoffset: 79;
         }
     }
-    
+
     @keyframes animateCircle3 {
         100% {
             stroke-dashoffset: 180;
         }
     }
-    
+
     @keyframes animateCircle4 {
         100% {
             stroke-dashoffset: 120;
         }
     }
-    
+
     @keyframes animateCircle5 {
         100% {
             stroke-dashoffset: 160;
         }
     }
-    
+
     @keyframes animateCircle6 {
         100% {
             stroke-dashoffset: 235;
         }
     }
-    
+
     @keyframes animateCircle7 {
         100% {
             stroke-dashoffset: 170;
@@ -517,7 +517,7 @@ svg {
     animation-delay: 2s;
 }
 
-.services .container{
+.services .container {
     transform: translateY(100%);
     opacity: 0;
     transition: 1s;
@@ -532,21 +532,21 @@ svg {
 @media (min-width: 768px) {
     @keyframes moveUp {
         0% {
-    
+
             transform: translateY(0);
         }
-    
+
         50% {
-    
+
             transform: translateY(-10px);
         }
-    
+
         100% {
-    
+
             transform: translateY(0);
         }
     }
-   
+
 }
 
 .service img {
@@ -620,7 +620,7 @@ svg {
     width: 100%;
 }
 
-.contact-info input{
+.contact-info input {
     background-color: #09090b;
     border-radius: 5px;
     border: 2px solid white;
@@ -630,7 +630,7 @@ svg {
     outline: none;
 }
 
-.contact-info button{
+.contact-info button {
     border-radius: 5px;
     border: 2px solid white;
     font-size: 20px;
@@ -643,22 +643,22 @@ svg {
     transition: 0.2s;
 }
 
-.contact-info button:hover{
+.contact-info button:hover {
     box-shadow: -6px -6px 15px -1px rgba(0, 0, 0, 0.7),
-                6px 6px 15px -1px #111;
+        6px 6px 15px -1px #111;
     background-color: black;
     transform: scale(1.03);
 }
 
-.myLinks .link{
-    @apply flex items-center gap-6 md:gap-0 overflow-hidden cursor-pointer h-[60px] w-full md:w-[45%] mr-[5px] mb-[5px] border-solid border-[2px] border-white rounded-3xl p-5 relative ;
+.myLinks .link {
+    @apply flex items-center gap-6 md:gap-0 overflow-hidden cursor-pointer h-[60px] w-full md:w-[45%] mr-[5px] mb-[5px] border-solid border-[2px] border-white rounded-3xl p-5 relative;
 }
 
-.myLinks .link i{
-    @apply text-2xl mr-2 ;
+.myLinks .link i {
+    @apply text-2xl mr-2;
 }
 
-.myLinks .link::after{
+.myLinks .link::after {
     content: '';
     width: 0;
     height: 100%;
@@ -669,27 +669,28 @@ svg {
     transition: 0.5s;
 }
 
-.contact .contact-info{
+.contact .contact-info {
     transform: translateX(-100%);
     opacity: 0;
     transition: 1s;
 }
 
-.contact.animate .contact-info{
+.contact.animate .contact-info {
     transform: translateX(0);
     opacity: 1;
 
 }
 
-.contact .myLinks{
+.contact .myLinks {
     transform: translateX(100%);
     transition: 1s;
     opacity: 0;
 }
 
-.contact.animate .myLinks{
+.contact.animate .myLinks {
     transform: translateX(0);
     opacity: 1;
 
 }
+
 /* End Projects  */
