@@ -417,82 +417,49 @@ circle {
     animation: animateCircle7 2s linear forwards;
 }
 
-.circle1 {
-    stroke-dashoffset: 65;
-}
 
-.circle2 {
-    stroke-dashoffset: 79;
-}
-
-.circle3 {
-    stroke-dashoffset: 180
-}
-
-.circle4 {
-    stroke-dashoffset: 120;
-}
-
-.circle4 {
-    stroke-dashoffset: 160;
-}
-
-.circle5 {
-    stroke-dashoffset: 160;
-}
-
-.circle6 {
-    stroke-dashoffset: 235;
-}
-
-.circle7 {
-    stroke-dashoffset: 170;
-}
-
-@media (min-width: 768px) {
-    @keyframes animateCircle {
-        100% {
-            stroke-dashoffset: 65;
-        }
+@keyframes animateCircle {
+    100% {
+        stroke-dashoffset: 65;
     }
-
-    @keyframes animateCircle2 {
-        100% {
-            stroke-dashoffset: 79;
-        }
-    }
-
-    @keyframes animateCircle3 {
-        100% {
-            stroke-dashoffset: 180;
-        }
-    }
-
-    @keyframes animateCircle4 {
-        100% {
-            stroke-dashoffset: 120;
-        }
-    }
-
-    @keyframes animateCircle5 {
-        100% {
-            stroke-dashoffset: 160;
-        }
-    }
-
-    @keyframes animateCircle6 {
-        100% {
-            stroke-dashoffset: 235;
-        }
-    }
-
-    @keyframes animateCircle7 {
-        100% {
-            stroke-dashoffset: 170;
-        }
-    }
-
 }
+
+@keyframes animateCircle2 {
+    100% {
+        stroke-dashoffset: 79;
+    }
+}
+
+@keyframes animateCircle3 {
+    100% {
+        stroke-dashoffset: 180;
+    }
+}
+
+@keyframes animateCircle4 {
+    100% {
+        stroke-dashoffset: 120;
+    }
+}
+
+@keyframes animateCircle5 {
+    100% {
+        stroke-dashoffset: 160;
+    }
+}
+
+@keyframes animateCircle6 {
+    100% {
+        stroke-dashoffset: 235;
+    }
+}
+
+@keyframes animateCircle7 {
+    100% {
+        stroke-dashoffset: 170;
+    }
+}
+
 
 svg {
     position: absolute;
