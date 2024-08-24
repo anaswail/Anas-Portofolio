@@ -3189,14 +3189,21 @@ nav i:hover {
   width: 60px;
   background-color: white;
   transition: 1s;
+  animation: line 5s ease-in-out infinite;
 }
 
-.about-us>h1:hover::after,
-.skills>h1:hover::after,
-.services>h1:hover::after,
-.projects>h1:hover::after,
-.contact>h1:hover::after {
-  width: 100%;
+@keyframes line{
+  0%{
+    width: 40px;
+  }
+
+  50%{
+    width: 100%;
+  }
+
+  100%{
+    width: 40px;
+  }
 }
 
 .about-us img {
